@@ -1,0 +1,289 @@
+@font-face {
+    font-family: val;
+    src: url("Valorant Font.ttf");
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+/* Red rect at the very top */
+#header {
+    width: 100%;
+    height: 80px;
+    background-color: #9c170e;
+    padding: 0.1px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    box-shadow: 0px 8px 10px black;
+}
+
+/* Style the text at the very top */
+#title {
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+} #name {
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin: auto;
+}
+
+/* Style the div for the image at the top */
+#img1 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+/* Style the main image */
+#img1 > .over {
+    margin: auto;
+    /* width: 50%; */
+    height: 100%;
+}
+
+/* Put the same image behind, stretched, and blurred */
+#img1 > .left {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+/* Put the same image behind, stretched, and blurred */
+#img1 > .right {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+/* Style the title below the first big image */
+#Title1 {
+    text-align: center;
+}
+
+/* Format the subtitle under the top image */
+#subTitle1 {
+    width: 100%;
+} #subTitle1 * {
+    font-size: 18px;
+    width: 40%;
+    margin: auto;
+    text-align: center;;
+}
+
+/* Standard text format */
+.basic_text {
+    color: #c5b174;
+    font-family: val;
+}
+
+/* New text format for plot descriptions */
+.sub_text {
+    font-family: 'Courier New', Courier, monospace;
+    color: #c5b174;
+    font-size: 18px;
+}
+
+/* Styling for all svg plots */
+.svg_plot {
+    background-color: white;
+    outline: 5px solid #c5b174;
+    box-shadow: 10px 15px 15px black;
+}
+
+/* Styling for the first plot */
+#p1 {
+    width: 100%;
+    height: 540px;
+    background-color: #9c170e;
+    display: flex;
+}
+
+/* Black Frames for the first plot */
+#p1 > .frame_left {
+    width: 25%;
+    height: 100%;
+} #p1 > .frame_right {
+    width: 25%;
+    height: 100%;
+    margin-left: auto;
+    background-color: black;
+}
+
+#p1 > .plot {
+    width: 50%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} #p1 > .plot .svg_plot {
+    margin-bottom: 20px;
+}
+
+/* Style div for the second plot */
+#p2 {
+    width: 100%;
+    height: 520px;
+    background-color: #9c170e;
+    display: flex;
+}
+
+/* sub-div of p2 for the plot */
+#p2 > .plot {
+    width: 40%;
+    height: 100%;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+}
+
+/* sub-div of p2 for the text */
+#p2 > .text {
+    width: 40%;
+    height: 100%;
+}
+
+/* Style the p2 text */
+#p2 > .text > * {
+    text-align: center;
+    margin-top: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/* sub-div of p2 for the triangular backdrop */
+#p2 > .frame {
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    margin-left: auto;
+}
+
+/* Center the first gif */
+#gif1 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Center the second image */
+#img2 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Center the third image */
+#img3 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for the third plot */
+#p3 {
+    width: 100%;
+    height: 520px;
+    background-color: #9c170e;
+    display: flex;
+}
+
+/* sub-div of p3 for the plot */
+#p3 > .plot {
+    width: 35%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* sub-div of p3 for the text */
+#p3 > .text {
+    width: 45%;
+    height: 100%;
+}
+
+/* Style the p3 text */
+#p3 > .text > * {
+    text-align: center;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/* sub-div of p3 for the triangular backdrop */
+#p3 > .frame {
+    width: 20%;
+    height: 100%;
+    /* background-color: black;
+    margin-left: auto; */
+}
+
+/* Style div for the fourth plot */
+#p4 {
+    width: 100%;
+    height: 520px;
+    background-color: #9c170e;
+    display: flex;
+}
+
+/* sub-div of p4 for the plot */
+#p4 > .plot {
+    width: 40%;
+    height: 100%;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+}
+
+/* sub-div of p4 for the text */
+#p4 > .text {
+    width: 40%;
+    height: 100%;
+}
+
+/* Style the p4 text */
+#p4 > .text > * {
+    text-align: center;
+    margin-top: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/* sub-div of p4 for the triangular backdrop */
+#p4 > .frame {
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    margin-left: auto;
+}
+
+#conclusion {
+    background-color: #9c170e;
+    width: 100%;
+    height: 700px;
+    display:flex;
+    justify-content: center;
+}
+
+#conclusion .text {
+    width: 60%;
+}
+
+#conclusion .text * {
+    text-align: center;
+    justify-content: center;
+}
