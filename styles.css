@@ -57,7 +57,10 @@ main {
 }
 
 footer {
-    background: None;
+    background: #333;
+    padding: 10px;
+} footer p {
+    color: white;
 }
 
 #about p {
