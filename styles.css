@@ -48,7 +48,7 @@ main {
     margin-bottom: 1rem;
 }
 
-#about, #projects, #contact {
+#about, #projects, #skills, #contact {
     margin-bottom: 2rem;
 }
 
@@ -58,3 +58,28 @@ main {
 
 footer {
     background:
+}
+
+#about p {
+    margin-left: 12px;
+}
+
+#skills .skill_cat {
+    margin-left: 12px;
+}
+
+#skills .skill_cat .s_list {
+    margin-left: 36px;
+}
+
+#projects .project {
+    margin-left: 12px;
+}
+
+#contact p {
+    margin-left: 24px;
+}
+
+#contact ul {
+    margin-left: 60px;
+}
