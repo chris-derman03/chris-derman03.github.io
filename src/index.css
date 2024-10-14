@@ -1,0 +1,16 @@
+@font-face {
+    font-family: globalFont;
+    src: url("./assets/fonts/SpButchLiteMedium-rv229.otf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: globalFont;
+    src: url("./assets/fonts/SpButchLiteBold-8O88B.otf");
+    font-weight: bold;
+}
+
+* {
+    font-family: globalFont;
+    font-weight: normal;
+}
