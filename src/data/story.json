@@ -1,0 +1,16 @@
+{
+    "author": "Christian DerManuelian",
+    "last-update": "10/13/2024",
+    "src": ["src/components/JSONCode.tsx", "src/components/JSONCode.css", "src/data/story.json"],
+    "content": {
+        "intro": "My name is Christian DerManuelian, I was born in Northridge, CA and attended AGBU Manoogian-Demirdjian School from Pre-Kindergarten up to my Senior year of High School. My childhood passions were playing basketball, football, ice hockey, video games, hiking, and watching Star Wars.",
+
+        "main-interest": "The most crucial hobby I left out above was that of building. From legos when I was a toddler, to Radio Shack Toy Builder kits in middle school, and all the way actual electronic circuits now, I have always had a passion for building things. This is why I transioned smoothly into coding, where I could now leverage computer software to satisfy my urge to create.",
+        
+        "pre-university": "After getting accepted into UC San Diego for a B.S. in Data Science, I immediately taught myself Python that summer. My early days of coding were the most project-dense. I used Python to build everything from scratch. Calenders, homework planners, calculators, and a physical alarm clock are some of the many fun small-scale projects that taught me how to think like a creative programmer.",
+
+        "college": "In the coming years, I would take classes in and did extensive project work in Java, C++, R, and SQL. I always enjoyed math and was very ahead in the subject, so now that I learned to code, the obvious path was AI and Machine Learning. My first ever neural network I built was a simple CNN to classify low-resolution images of food. From that moment I knew Machine Learning was the field for me. I went on to get a proper, low-level understanding of Deep Neural Nets, RNN's, Language Models for NLP, and ended off my degree with Reinforcement Learning techniques. I loved working with all of these frameworks, and am itching to work with them in industry. I aspire to acquire experience working with AI and broadening my practical skillest so I may one day do research developing state-of-the-art Machine Learning methods and techniques.",
+        
+        "post-university": "In Summer of 2024, I graduated from UC San Diego with my B.S. degree in Data Science. I currently live in Los Angeles and am searching for work in the Southern California area. My time is spent working on coding and robotics projects, as well as online classes in Machine Learning, Web Development, and Circuit Building. My free time is spent going to the gym, playing goalie in Ice Hockey, watching movies, and playing the piano."
+    }
+}

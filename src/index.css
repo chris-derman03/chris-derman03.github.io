@@ -10,11 +10,16 @@
     font-weight: bold;
 }
 
-* {
+@font-face {
+    font-family: codeFont;
+    src: url("./assets/fonts/CsGenioMonoRegular-BLjd5.otf");
+}
+
+/* * {
     font-family: globalFont;
     font-weight: normal;
     color: white;
-}
+} */
 
 #bg-video {
     position: fixed;
@@ -24,4 +29,14 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+}
+
+.bodySection {
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px white;
+    border-radius: 5px;
+}
+
+#myStory {
+    width: 80%;
 }
