@@ -1,5 +1,5 @@
 import background_loop from "./assets/videos/background_loop.mp4";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, Show } from "@chakra-ui/react";
 import MyStory from "./components/MyStory";
 
 function App() {
@@ -9,9 +9,12 @@ function App() {
         <source src={background_loop} type="video/mp4" />
       </video>
       <Grid
-        templateColumns="17.5% 65% 17.5%"
+        templateColumns={{
+          base: "5% 90% 5%",
+          lg: "17.5% 65% 17.5%",
+        }}
         templateRows="auto repeat(5, auto)"
-        gap={4}
+        rowGap={50}
       >
         <GridItem rowStart={1} colSpan={3} bg="rgb(0,0,0,0.8)">
           Heading
@@ -28,12 +31,16 @@ function App() {
         <GridItem rowStart={5} colStart={2} bg="rgb(0,0,100,0.8)">
           Body4
         </GridItem>
-        <GridItem rowStart={3} colStart={3}>
-          Aside
-        </GridItem>
-        <GridItem rowStart={5} colStart={1}>
-          Aside
-        </GridItem>
+        <Show above="lg">
+          <GridItem rowStart={3} colStart={3}>
+            Aside
+          </GridItem>
+        </Show>
+        <Show above="lg">
+          <GridItem rowStart={5} colStart={1}>
+            Aside
+          </GridItem>
+        </Show>
       </Grid>
     </>
   );

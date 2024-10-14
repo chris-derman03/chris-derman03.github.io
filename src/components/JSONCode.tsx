@@ -1,16 +1,5 @@
 import "./JSONCode.css";
 
-// interface Props {
-//   object: { [key: string]: string | };
-// // }
-// interface JSONValue {
-//   [key: string]: string | JSONValue; // Keys can be strings, values can be strings or nested JSONValue objects
-// }
-
-// interface Props {
-//   object: JSONValue; // Use JSONValue for the object prop
-// }
-
 interface JSONValue {
   [key: string]: string | string[] | JSONValue; // Represents valid JSON values
 }
@@ -33,7 +22,7 @@ const parseObject = (
           className="dynamic-indent"
           style={
             {
-              "--dynamic-margin": `${20 * depth + 20}px`,
+              "--dynamic-margin": `${10 * depth + 10}px`,
             } as React.CSSProperties
           }
         >
@@ -46,7 +35,7 @@ const parseObject = (
               {" "}
               <span className="jsonCode">[</span>
               {(object[key] as string[]).map((item, idx) => (
-                <span key={idx}>
+                <span key={idx} className="objectValue">
                   "{item}"
                   {idx < (object[key] as string[]).length - 1 ? (
                     <span className="jsonCode">, </span>
@@ -61,6 +50,7 @@ const parseObject = (
             parseObject(object[key], depth + 1)
           )}
           {index < keys.length - 1 && <span className="jsonCode">,</span>}
+          {index < keys.length - 1 && depth === 2 && <br />}
           <br />
         </div>
       ))}
@@ -70,7 +60,7 @@ const parseObject = (
 };
 
 const JSONCode = ({ object }: Props) => {
-  return <>{parseObject(object)}</>;
+  return <div>{parseObject(object)}</div>;
 };
 
 export default JSONCode;

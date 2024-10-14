@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: globalFont;
     src: url("./assets/fonts/SpButchLiteMedium-rv229.otf");
     font-weight: normal;
@@ -8,18 +8,12 @@
     font-family: globalFont;
     src: url("./assets/fonts/SpButchLiteBold-8O88B.otf");
     font-weight: bold;
-}
+} */
 
 @font-face {
     font-family: codeFont;
-    src: url("./assets/fonts/CsGenioMonoRegular-BLjd5.otf");
+    src: url("./assets/fonts/Motomangucode-p7Jj1.ttf");
 }
-
-/* * {
-    font-family: globalFont;
-    font-weight: normal;
-    color: white;
-} */
 
 #bg-video {
     position: fixed;
@@ -29,14 +23,4 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
-}
-
-.bodySection {
-    background-color: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 10px white;
-    border-radius: 5px;
-}
-
-#myStory {
-    width: 80%;
 }

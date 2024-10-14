@@ -1,18 +1,19 @@
 .jsonCode {
-    font-family: codeFont;
-    color: rgb(88, 136, 204);
+    color: rgb(255, 251, 81);
 }
 
 .objectKey {
-    font-family: codeFont;
-    color: rgb(153, 88, 127);
+    color: rgb(101, 183, 181);
 }
 
 .objectValue {
-    font-family: codeFont;
-    color: rgb(24, 112, 30);
+    color: rgb(189, 101, 123);
 }
 
 .dynamic-indent {
     margin-left: var(--dynamic-margin, 0px);
+}
+
+.lineTest {
+    color: red;
 }
