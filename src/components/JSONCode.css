@@ -12,3 +12,7 @@
     font-family: codeFont;
     color: rgb(24, 112, 30);
 }
+
+.dynamic-indent {
+    margin-left: var(--dynamic-margin, 0px);
+}

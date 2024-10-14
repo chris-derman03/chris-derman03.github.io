@@ -19,12 +19,6 @@ interface Props {
   object: Record<string, string | string[] | JSONValue>; // Define object as a record with string keys and JSONValue values
 }
 
-const putTabs = (level: number) => {
-  return Array(level)
-    .fill("\u00A0") // \u00A0 is the Unicode for &nbsp;
-    .join("");
-};
-
 const parseObject = (
   object: Record<string, string | string[] | JSONValue>,
   depth: number = 1
@@ -32,12 +26,18 @@ const parseObject = (
   const keys = Object.keys(object);
   return (
     <>
-      {"{"}
+      <span className="jsonCode">{"{"}</span>
       {keys.map((key, index) => (
-        <p key={key}>
-          <span className="objectKey">
-            {putTabs(depth * 4)}"{key}"
-          </span>
+        <div
+          key={key}
+          className="dynamic-indent"
+          style={
+            {
+              "--dynamic-margin": `${20 * depth + 20}px`,
+            } as React.CSSProperties
+          }
+        >
+          <span className="objectKey">"{key}"</span>
           <span className="jsonCode">: </span>
           {typeof object[key] === "string" ? (
             <span className="objectValue"> "{object[key]}"</span>
@@ -62,16 +62,15 @@ const parseObject = (
           )}
           {index < keys.length - 1 && <span className="jsonCode">,</span>}
           <br />
-        </p>
+        </div>
       ))}
-      {putTabs((depth - 1) * 4)}
-      {"}"}
+      <span className="jsonCode">{"}"}</span>
     </>
   );
 };
 
 const JSONCode = ({ object }: Props) => {
-  return <p className="jsonCode">{parseObject(object)}</p>;
+  return <>{parseObject(object)}</>;
 };
 
 export default JSONCode;
