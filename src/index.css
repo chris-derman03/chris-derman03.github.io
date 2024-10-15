@@ -15,6 +15,16 @@
     src: url("./assets/fonts/Motomangucode-p7Jj1.ttf");
 }
 
+:root {
+    --global-font-size: 10px;
+}
+  
+@media (min-width: 480px) {
+    :root {
+        --global-font-size: 14px;
+    }
+}
+
 #bg-video {
     position: fixed;
     top: 0;
