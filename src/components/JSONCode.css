@@ -1,7 +1,7 @@
 .jsonLine {
-    white-space: pre-wrap; /* Enable word wrapping */
-    word-wrap: break-word; /* Break long words if needed */
-    overflow-wrap: break-word; /* Ensure long words are wrapped */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .jsonCode {
@@ -14,12 +14,4 @@
 
 .objectValue {
     color: rgb(189, 101, 123);
-}
-
-.dynamic-indent {
-    margin-left: var(--dynamic-margin, 0px);
-}
-
-.lineTest {
-    color: red;
 }
