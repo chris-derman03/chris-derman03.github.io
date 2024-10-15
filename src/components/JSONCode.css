@@ -1,3 +1,9 @@
+.jsonLine {
+    white-space: pre-wrap; /* Enable word wrapping */
+    word-wrap: break-word; /* Break long words if needed */
+    overflow-wrap: break-word; /* Ensure long words are wrapped */
+}
+
 .jsonCode {
     color: rgb(255, 251, 81);
 }

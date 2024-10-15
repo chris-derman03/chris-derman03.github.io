@@ -1,66 +1,128 @@
+import { Fragment, useState } from "react";
 import "./JSONCode.css";
+import { Box, HStack } from "@chakra-ui/react";
 
-interface JSONValue {
-  [key: string]: string | string[] | JSONValue; // Represents valid JSON values
-}
+/* 
+Split a raw text line into tthe key part and the value part
 
-interface Props {
-  object: Record<string, string | string[] | JSONValue>; // Define object as a record with string keys and JSONValue values
-}
+* Loop through text, once we count 2 quotes, if any character is a colon, return a split on that index
+* This is so we can split on colons without splitting on colons in the object key name
+*/
+const jsonKeyValueTextSplit = (line: string) => {
+  let numQuotes = 0;
+  let significantColonIndex = 0;
 
-const parseObject = (
-  object: Record<string, string | string[] | JSONValue>,
-  depth: number = 1
-) => {
-  const keys = Object.keys(object);
+  for (let i = 0; i < line.length; i++) {
+    if (line[i] === '"') numQuotes += 1;
+    if (numQuotes === 2 && line[i] === ":") {
+      significantColonIndex = i;
+      break;
+    }
+  }
+
+  return [
+    line.slice(0, significantColonIndex),
+    line.slice(significantColonIndex + 1),
+  ];
+};
+
+/* 
+Given a trimmed raw text line for a json file, render it in an html <p> tag with coding styles.
+
+* Split the line on : (colon) characters
+* Inside a <p> tag with no following newline
+    * If the line is a { or }, return that by itself
+    * Otherwise, make a new <p> similar to the one above
+        * Assume this is a valid string representing a .json file line
+        * Use the split (key string and value string) and format the json line
+*/
+const styleRawTextLine = (line: string) => {
+  const split = jsonKeyValueTextSplit(line);
+  console.log("===============");
+  console.log(line);
+  console.log(split);
+  console.log("===============");
+
   return (
-    <>
-      <span className="jsonCode">{"{"}</span>
-      {keys.map((key, index) => (
-        <div
-          key={key}
-          className="dynamic-indent"
-          style={
-            {
-              "--dynamic-margin": `${10 * depth + 10}px`,
-            } as React.CSSProperties
-          }
-        >
-          <span className="objectKey">"{key}"</span>
-          <span className="jsonCode">: </span>
-          {typeof object[key] === "string" ? (
-            <span className="objectValue"> "{object[key]}"</span>
-          ) : Array.isArray(object[key]) ? (
-            <span className="objectValue">
-              {" "}
-              <span className="jsonCode">[</span>
-              {(object[key] as string[]).map((item, idx) => (
-                <span key={idx} className="objectValue">
-                  "{item}"
-                  {idx < (object[key] as string[]).length - 1 ? (
-                    <span className="jsonCode">, </span>
-                  ) : (
-                    ""
-                  )}
-                </span>
-              ))}
-              <span className="jsonCode">]</span>
-            </span>
-          ) : (
-            parseObject(object[key], depth + 1)
-          )}
-          {index < keys.length - 1 && <span className="jsonCode">,</span>}
-          {index < keys.length - 1 && depth === 2 && <br />}
-          <br />
-        </div>
-      ))}
-      <span className="jsonCode">{"}"}</span>
-    </>
+    <p style={{ display: "inline" }}>
+      {line === "{" ? (
+        <span className="jsonCode">{line}</span>
+      ) : line[0] === "}" ? (
+        <span className="jsonCode">{line}</span>
+      ) : (
+        <p style={{ display: "inline" }}>
+          {split[1].trim()[0] === "[" ? (
+            <>
+              <span className="objectKey">{split[0]}</span>
+              <span className="jsonCode">:</span>
+              {split[1][split[1].length - 1] === "," ? (
+                <>
+                  <span className="objectValue">
+                    {split[1].substring(0, split[1].length - 1)}
+                  </span>
+                  <span className="jsonCode">,</span>
+                </>
+              ) : (
+                <span className="objectValue">{split[1]}</span>
+              )}
+            </>
+          ) : split[1].trim()[0] === "{" ? (
+            <>
+              <span className="objectKey">{split[0]}</span>
+              <span className="jsonCode">:{split[1]}</span>
+            </>
+          ) : split[1].trim()[0] === '"' ? (
+            <>
+              <span className="objectKey">{split[0]}</span>
+              <span className="jsonCode">:</span>
+              {split[1][split[1].length - 1] === "," ? (
+                <>
+                  <span className="objectValue">
+                    {split[1].substring(0, split[1].length - 1)}
+                  </span>
+                  <span className="jsonCode">,</span>
+                </>
+              ) : (
+                <span className="objectValue">{split[1]}</span>
+              )}
+            </>
+          ) : null}
+        </p>
+      )}
+    </p>
   );
 };
 
-const JSONCode = ({ object }: Props) => {
-  return <div>{parseObject(object)}</div>;
+interface Props {
+  jsonText: string;
+}
+
+const JSONCode = ({ jsonText }: Props) => {
+  const [rawText, setRawText] = useState("");
+
+  fetch(jsonText)
+    .then((r) => r.text())
+    .then((text) => {
+      setRawText(text);
+    });
+
+  return (
+    <div>
+      {rawText.split("\n").map((line: string, index) => (
+        <Fragment key={index}>
+          {
+            <Box
+              className="jsonLine"
+              marginLeft={line.split(/\S/)[0].length * 2}
+            >
+              {styleRawTextLine(line.trim())}
+              <br></br>
+            </Box>
+          }
+        </Fragment>
+      ))}
+    </div>
+  );
 };
 
 export default JSONCode;

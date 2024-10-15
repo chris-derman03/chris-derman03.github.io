@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Box, Flex, Grid, GridItem, HStack } from "@chakra-ui/react";
 import "./BodySections.css";
-import story from "../data/story.json";
+import story from "../data/story.txt";
 import JSONCode from "./JSONCode";
 import LineNumbers from "./LineNumbers";
 
@@ -43,16 +43,17 @@ const MyStory = () => {
           rowStart={2}
           colStart={1}
           className="bodySectionBody"
-          height={codeBodyHeight}
+          // height={codeBodyHeight}
         >
-          <HStack alignItems={"flex-start"}>
+          {/* <HStack alignItems={"flex-start"}>
             <Box className="listNumbersContainer">
               <LineNumbers />
             </Box>
             <div ref={codeBodyRef}>
-              <JSONCode object={story}></JSONCode>
+              <JSONCode jsonText={JSON.stringify(story)}></JSONCode>
             </div>
-          </HStack>
+          </HStack> */}
+          <JSONCode jsonText={story}></JSONCode>
         </GridItem>
       </Grid>
     </div>
