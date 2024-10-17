@@ -1,7 +1,7 @@
 {
     "author": "Christian DerManuelian",
     "last-update": "10/13/2024",
-    "src": ["src/components/JSONCode.tsx", "src/components/JSONCode.css", "src/data/story.json"],
+    "src": ["src/components/JSONCode.tsx", "src/components/JSONCode.css", "src/data/story.txt"],
     "content": {
         "intro": "My name is Christian DerManuelian, I was born in Northridge, CA and attended AGBU Manoogian-Demirdjian School from Pre-Kindergarten up to my Senior year of High School. My childhood passions were playing basketball, football, ice hockey, video games, hiking, and watching Star Wars.",
 

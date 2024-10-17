@@ -1,15 +1,18 @@
+.jsonLine {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 .jsonCode {
-    color: rgb(255, 251, 81);
+    color: #fffb51;
 }
 
 .objectKey {
-    color: rgb(101, 183, 181);
+    color: #65b7b5;
+    white-space: nowrap;
 }
 
 .objectValue {
     color: rgb(189, 101, 123);
-}
-
-.dynamic-indent {
-    margin-left: var(--dynamic-margin, 0px);
 }

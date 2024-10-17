@@ -1,12 +1,19 @@
 .bodySection {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(20, 7, 32, 0.6);
     box-shadow: 0 0 10px white;
     border-radius: 5px;
 }
 
+.bodySectionHeader {
+    font-family: codeFont;
+    box-shadow: 0 0 10px white;
+    border-radius: 4px;
+    background-color: rgb(49, 31, 65);
+}
+
 .bodySectionBody {
     font-family: codeFont;
-    font-size: calc(var(--global-font-size) * 1);
+    font-size: calc(var(--global-font-size));
     overflow: hidden;
 }
 
@@ -30,4 +37,5 @@
     text-align: right;
 } .lineNumber {
     font-family: codeFont;
+    color: rgb(72, 46, 95);
 } 
