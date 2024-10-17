@@ -1,0 +1,64 @@
+#pyAboutContainer {
+    background-color: rgb(13, 54, 140);
+}
+
+.pyCodeContainer {
+    font-family: codeFont;
+    font-size: calc(var(--global-font-size) * 0.9);
+    padding-top: 1px;
+}
+
+.pyCode {
+    color: rgb(249, 74, 255);
+}
+
+.pyClassHeader {
+    color: rgb(239, 224, 187);
+}
+
+.pyString {
+    color: rgb(19, 170, 68);
+}
+
+.pyVar {
+    color: rgb(20, 255, 224);
+}
+
+.pyArg {
+    color: rgb(34, 119, 255);
+}
+
+.pySyn1 {
+    color: rgb(175, 8, 22);
+}
+
+.pySyn2 {
+    color: rgb(255, 230, 16);
+}
+
+.pyFun {
+    color: rgb(255, 246, 161);
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+  }
+a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(207, 116, 44);
+    transition: width 0.3s;
+}a:hover::after {
+    width: 100%;
+}
+
+.lineNumber {
+    color: rgb(248, 248, 248); 
+    font-size: calc(var(--global-font-size) * 0.9);
+}

@@ -35,6 +35,12 @@
     z-index: -1;
 }
 
+.pageHeader {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
 h2 {
     color: rgb(101, 183, 181);
     font-size: calc(var(--global-font-size) * 1.3);

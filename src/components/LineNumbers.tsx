@@ -1,9 +1,13 @@
 import "./BodySections.css";
 
-const LineNumbers = () => {
+interface Props {
+  lines: number;
+}
+
+const LineNumbers = ({ lines }: Props) => {
   return (
-    <ol className="lineNumbers" style={{ listStyleType: "none" }}>
-      {Array.from({ length: 200 }, (_, index) => (
+    <ol className="lineNumbersContainer" style={{ listStyleType: "none" }}>
+      {Array.from({ length: lines }, (_, index) => (
         <li key={index} className="lineNumber">
           {index + 1}
         </li>

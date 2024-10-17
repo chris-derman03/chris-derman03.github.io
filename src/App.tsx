@@ -1,6 +1,7 @@
 import background_loop from "./assets/videos/background_loop.mp4";
 import { Grid, GridItem, Show } from "@chakra-ui/react";
-import MyStory from "./components/MyStory";
+import Header from "./components/Header/Header";
+import MyStory from "./components/MyStory/MyStory";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
         templateRows="auto repeat(5, auto)"
         rowGap={50}
       >
-        <GridItem rowStart={1} colSpan={3} bg="rgb(0,0,0,0.8)">
-          Heading
+        <GridItem rowStart={1} colSpan={3} className="pageHeader">
+          <Header />
         </GridItem>
         <GridItem rowStart={2} colStart={2}>
           <MyStory />
