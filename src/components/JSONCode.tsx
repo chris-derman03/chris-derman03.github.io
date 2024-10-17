@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, HStack } from "@chakra-ui/react";
 import "./JSONCode.css";
 
 /* 
@@ -34,7 +34,7 @@ Given a string representation as an arary, return a jsx render of it with proper
 LOGIC:
     * Remove array brackets and optional following comma from string
         * Split that by "," to get the raw array elements
-    * Render a space and a bracket
+    * Render the opening bracket
     * Render each element with a comma after it, expect for the last element
         *  Elements have objectValue class, commas have jsonCode class    
     * Render closing bracket
@@ -89,7 +89,7 @@ const renderAsValue = (valueText: string) => {
 
   return (
     <span>
-      <span className="objectValue">{valueText}</span>
+      <span className="objectValue"> {valueText}</span>
       <span className="jsonCode">{endingComma}</span>
     </span>
   );
@@ -121,14 +121,14 @@ const styleRawTextLine = (line: string) => {
         <span className="jsonCode">{line}</span>
       ) : (
         // If the line is "key: value"
-        <span style={{ display: "inline" }}>
+        <HStack spacing={0} alignItems={"flex-start"}>
           <span className="objectKey">{keyText}</span>
           <span className="jsonCode">
-            : {valueText.trim() === "{" ? "{" : ""}
+            :{valueText.trim() === "{" ? " {" : ""}
           </span>
           {renderAsList(valueText)}
           {renderAsValue(valueText)}
-        </span>
+        </HStack>
       )}
     </span>
   );
