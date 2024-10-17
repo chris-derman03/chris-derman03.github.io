@@ -1,0 +1,18 @@
+<span className="pyCode"><i>class</i></span> <span className="pyClassHeader">Me</span><span className="pySyn2">()</span><span className="pyVar">:</span>
+<span className="pyVar">    about = </span><span className="pySyn2">[</span><span className="pyString">"Data Scientist"</span><span className="pyVar">,</span>
+             <span className="pyString">"Machine Learning Engineer"</span><span className="pyVar">,</span>
+             <span className="pyString">"Web Developer"</span><span className="pyVar">,</span>
+             <span className="pyString">"Ice Hockey Goalie"</span><span className="pySyn2">]</span>
+<span className="pyVar">    email = </span><span className="pyString">"christian.dermanuelian@gmail.com"</span>
+<span className="pyVar">    linkedin = </span><a className="pyString" target="_blank" href="https://www.linkedin.com/in/christian-dermanuelian-366614270/">"https://www.linkedin.com/in/christian-dermanuelian-366614270/"</a>
+<span className="pyVar">    github = </span><a className="pyString" target="_blank" href="https://github.com/chris-derman03">"https://github.com/chris-derman03"</a>
+
+<span className="pyCode"><i>    def</i> __init__</span><span className="pySyn2">(</span><span className="pyArg"><i>self</i></span><span className="pySyn2">)</span><span className="pyVar">:</span>
+        <span className="pyArg"><i>self</i></span><span className="pyVar">.fname = </span><span className="pyString">"Christian"</span>
+        <span className="pyArg"><i>self</i></span><span className="pyVar">.lname = </span><span className="pyString">"DerManuelian"</span>
+    
+<span className="pyCode"><i>    def </i></span><span className="pyFun">greet</span><span className="pySyn2">(</span><span className="pyArg"><i>self</i></span><span className="pySyn2">)</span><span className="pyVar">:</span>
+<span className="pyFun">        print</span><span className="pySyn2">(</span><span className="pyCode"><i>f</i></span><span className="pyString">"Hello, I'm </span><span className="pySyn1">{</span><span className="pyArg"><i>self</i></span><span className="pyVar">.fname</span><span className="pySyn1">} {</span><span className="pyArg"><i>self</i></span><span className="pyVar">.lname</span><span className="pySyn1">}</span><span className="pyString">. Nice to meet you!"</span><span className="pySyn2">)</span>
+    
+<span className="pyCode"><i>    def </i></span><span className="pyFun">contact</span><span className="pySyn2">(</span><span className="pyArg"><i>self</i></span><span className="pySyn2">)</span><span className="pyVar">:</span>
+<span className="pyFun">        print</span><span className="pySyn2">(</span><span className="pyCode"><i>f</i></span><span className="pyString">"Feel free to contact me at </span><span className="pySyn1">{</span><span className="pyArg"><i>self</i></span><span className="pyVar">.email</span><span className="pySyn1">}</span><span className="pyString">, or visit my linkedin."</span><span className="pySyn2">)</span>

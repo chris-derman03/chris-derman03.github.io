@@ -34,3 +34,9 @@
     object-fit: cover;
     z-index: -1;
 }
+
+.pageHeader {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
