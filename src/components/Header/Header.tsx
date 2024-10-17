@@ -1,5 +1,4 @@
 import { HStack, Image } from "@chakra-ui/react";
-// import meImage from "../../assets/img/dublin.png";
 import meImage from "../../assets/img/geisel.png";
 import PythonAbout from "./PythonAbout";
 

@@ -2,8 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Box, Grid, GridItem, HStack } from "@chakra-ui/react";
 import { LuFileJson } from "react-icons/lu";
 import story from "../../data/story.txt";
-import "../BodySections.css";
-import "./MyStory.css";
+
 import JSONCode from "./JSONCode";
 import LineNumbers from "../LineNumbers";
 
@@ -37,8 +36,8 @@ const MyStory = () => {
             <div ref={divRef}>
               <JSONCode jsonText={story}></JSONCode>
             </div>
-            <Box className="listNumbersContainer" height={codeBodyHeight}>
-              <LineNumbers lines={200} />
+            <Box height={codeBodyHeight}>
+              <LineNumbers lines={200} classPrefix="myStory" />
             </Box>
           </HStack>
         </GridItem>

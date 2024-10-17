@@ -1,18 +1,25 @@
-import "./BodySections.css";
+import { ListItem, OrderedList } from "@chakra-ui/react";
 
 interface Props {
   lines: number;
+  classPrefix: string;
 }
 
-const LineNumbers = ({ lines }: Props) => {
+const LineNumbers = ({ lines, classPrefix }: Props) => {
   return (
-    <ol className="lineNumbersContainer" style={{ listStyleType: "none" }}>
+    <OrderedList
+      className={classPrefix + "LineNumbersContainer"}
+      style={{ listStyleType: "none", textAlign: "right" }}
+      p={0}
+      paddingTop={0.4}
+      m={0}
+    >
       {Array.from({ length: lines }, (_, index) => (
-        <li key={index} className="lineNumber">
+        <ListItem key={index} className={classPrefix + "LineNumber"}>
           {index + 1}
-        </li>
+        </ListItem>
       ))}
-    </ol>
+    </OrderedList>
   );
 };
 

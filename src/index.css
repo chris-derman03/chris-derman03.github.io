@@ -1,18 +1,12 @@
-/* @font-face {
-    font-family: globalFont;
-    src: url("./assets/fonts/SpButchLiteMedium-rv229.otf");
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: globalFont;
-    src: url("./assets/fonts/SpButchLiteBold-8O88B.otf");
-    font-weight: bold;
-} */
-
 @font-face {
     font-family: codeFont;
     src: url("./assets/fonts/Motomangucode-p7Jj1.ttf");
+}
+
+* {
+    font-family: codeFont;
+    padding: 0;
+    margin: 0;
 }
 
 :root {
@@ -35,18 +29,109 @@
     z-index: -1;
 }
 
-.pageHeader {
-    display: flex;
-    justify-self: center;
-    align-self: center;
-}
-
 h2 {
     color: rgb(101, 183, 181);
     font-size: calc(var(--global-font-size) * 1.3);
 }
 
+/* =========================================================== */
+/* HEADER */
+
+.pageHeader {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.pyAboutContainer {
+    background-color: rgb(25, 53, 73);
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px black;
+    filter: drop-shadow(0 0 8px rgb(28, 62, 172));
+}
+
+.pyAboutHeader {
+    background-color: rgb(14, 4, 68);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.pyAboutNav {
+    margin-left: 10px;
+    height: 100%;
+}
+
+.pyAboutBody {
+    padding-left: 15px;
+}
+
+.pyAboutCodeContainer {
+    font-size: calc(var(--global-font-size) * 0.9);
+}
+
+.pyAboutLineNumber {
+    font-size: calc(var(--global-font-size) * 0.9);
+}
+
+.pyAboutLineNumbersContainer {
+    color: rgb(28, 62, 172);
+    padding-top: 1px;
+}
+
+.pyAboutTab {
+    background-color:rgb(25, 53, 73);
+    color: rgb(28, 62, 172);
+    text-shadow: 0 0 5px rgb(12, 5, 73);
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================== */
+/* BODY */
+
+.bodySection {
+    background-color: rgba(20, 7, 32, 0.6);
+    box-shadow: 0 0 10px white;
+    border-radius: 10px;
+}
+
+.bodySectionHeader {
+    box-shadow: 0 0 10px white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: rgb(49, 31, 65);
+}
+
+.bodySectionBody {
+    font-size: calc(var(--global-font-size));
+    overflow: clip;
+    padding-bottom: 4px;
+}
+
+/* =========================================================== */
+/* STORY */
+
+.myStoryLineNumber {
+    font-size: 10px;
+}
+
 .fileLogo {
     font-size: calc(var(--global-font-size) * 1.9);
     color: #fffb51;
+}
+
+.myStoryLineNumber {
+    font-size: calc(var(--global-font-size));
+}
+
+.myStoryLineNumbersContainer {
+    color: rgb(141, 87, 177);
 }
