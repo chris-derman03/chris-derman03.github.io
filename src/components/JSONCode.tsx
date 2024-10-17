@@ -1,12 +1,14 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
+import { Box } from "@chakra-ui/react";
 import "./JSONCode.css";
-import { Box, HStack } from "@chakra-ui/react";
 
 /* 
-Split a raw text line into tthe key part and the value part
+Given a string representation of .json file line in the form "key: string",
+split it into the key part and the value part
 
-* Loop through text, once we count 2 quotes, if any character is a colon, return a split on that index
-* This is so we can split on colons without splitting on colons in the object key name
+LOGIC:
+    * Loop through text, once we count 2 quotes, if any character is a colon, return a split on that index
+    (This is so we can split on colons without splitting on colons in the object key name)
 */
 const jsonKeyValueTextSplit = (line: string) => {
   let numQuotes = 0;
@@ -26,70 +28,109 @@ const jsonKeyValueTextSplit = (line: string) => {
   ];
 };
 
-/* 
-Given a trimmed raw text line for a json file, render it in an html <p> tag with coding styles.
+/*
+Given a string representation as an arary, return a jsx render of it with proper styling
 
-* Split the line on : (colon) characters
-* Inside a <p> tag with no following newline
-    * If the line is a { or }, return that by itself
-    * Otherwise, make a new <p> similar to the one above
-        * Assume this is a valid string representing a .json file line
-        * Use the split (key string and value string) and format the json line
+LOGIC:
+    * Remove array brackets and optional following comma from string
+        * Split that by "," to get the raw array elements
+    * Render a space and a bracket
+    * Render each element with a comma after it, expect for the last element
+        *  Elements have objectValue class, commas have jsonCode class    
+    * Render closing bracket
+    * Render a comma after the array if it existed
 */
-const styleRawTextLine = (line: string) => {
-  const split = jsonKeyValueTextSplit(line);
-  console.log("===============");
-  console.log(line);
-  console.log(split);
-  console.log("===============");
+const renderAsList = (arrayText: string) => {
+  if (!arrayText.trim().startsWith("[")) return null;
+
+  const arrayElements = arrayText
+    .trim()
+    .replace(/,$/, "") // remove ending comma
+    .replace(/^\[|\]$/g, "") // remove leading and trailing brackets
+    .split(",");
 
   return (
-    <p style={{ display: "inline" }}>
+    <span>
+      <span className="jsonCode">{" ["}</span>
+      {arrayElements.map((element, index) => (
+        // Array values one by one with styles seperating commas
+        <span key={"element_" + index}>
+          <span className="objectValue">{element}</span>
+          <span>
+            {index !== arrayElements.length - 1 ? (
+              <span className="jsonCode">,</span>
+            ) : null}
+          </span>
+        </span>
+      ))}
+      <span className="jsonCode">{"]"}</span>
+      {arrayText.endsWith(",") ? <span className="jsonCode">{","}</span> : null}
+    </span>
+  );
+};
+
+/*
+INPUT:
+    valueText: string representation of an object string value
+    
+OUPUT: 
+    jsx render of valueText with proper styling
+
+LOGIC:
+    * If there is a comma after the string, remove it from valueText
+    * Render valueText with the objectValue class
+    * Then render a comma if there was one with the jsonCode class
+*/
+const renderAsValue = (valueText: string) => {
+  if (!valueText.startsWith('"')) return null;
+
+  const endingComma = valueText.endsWith(",") ? "," : "";
+  if (endingComma) valueText = valueText.slice(0, -1);
+
+  return (
+    <span>
+      <span className="objectValue">{valueText}</span>
+      <span className="jsonCode">{endingComma}</span>
+    </span>
+  );
+};
+
+/* 
+Given a trimmed raw text line for a json file, render it in jsx with coding styles
+
+LOGIC:
+    * Split the line on the proper : (colon) character
+    * If the line is just an open or closed bracket, render that as is
+    * Otherwise, we have a "key: value" line
+        * Render the key, which can only be a string, followed by a colon 
+        * Then render the value by the following cases
+              * Render the text as an array, if its not a valid array the function will return null
+              * Rebder the text as a string value, if its not a valid string, the function will return null
+*/
+const styleRawTextLine = (line: string) => {
+  if (line === "") return null;
+  const split = jsonKeyValueTextSplit(line);
+  const keyText = split[0].trim();
+  const valueText = split[1].trim();
+
+  return (
+    <span style={{ display: "inline" }}>
       {line === "{" ? (
         <span className="jsonCode">{line}</span>
       ) : line[0] === "}" ? (
         <span className="jsonCode">{line}</span>
       ) : (
-        <p style={{ display: "inline" }}>
-          {split[1].trim()[0] === "[" ? (
-            <>
-              <span className="objectKey">{split[0]}</span>
-              <span className="jsonCode">:</span>
-              {split[1][split[1].length - 1] === "," ? (
-                <>
-                  <span className="objectValue">
-                    {split[1].substring(0, split[1].length - 1)}
-                  </span>
-                  <span className="jsonCode">,</span>
-                </>
-              ) : (
-                <span className="objectValue">{split[1]}</span>
-              )}
-            </>
-          ) : split[1].trim()[0] === "{" ? (
-            <>
-              <span className="objectKey">{split[0]}</span>
-              <span className="jsonCode">:{split[1]}</span>
-            </>
-          ) : split[1].trim()[0] === '"' ? (
-            <>
-              <span className="objectKey">{split[0]}</span>
-              <span className="jsonCode">:</span>
-              {split[1][split[1].length - 1] === "," ? (
-                <>
-                  <span className="objectValue">
-                    {split[1].substring(0, split[1].length - 1)}
-                  </span>
-                  <span className="jsonCode">,</span>
-                </>
-              ) : (
-                <span className="objectValue">{split[1]}</span>
-              )}
-            </>
-          ) : null}
-        </p>
+        // If the line is "key: value"
+        <span style={{ display: "inline" }}>
+          <span className="objectKey">{keyText}</span>
+          <span className="jsonCode">
+            : {valueText.trim() === "{" ? "{" : ""}
+          </span>
+          {renderAsList(valueText)}
+          {renderAsValue(valueText)}
+        </span>
       )}
-    </p>
+    </span>
   );
 };
 
@@ -109,17 +150,14 @@ const JSONCode = ({ jsonText }: Props) => {
   return (
     <div>
       {rawText.split("\n").map((line: string, index) => (
-        <Fragment key={index}>
-          {
-            <Box
-              className="jsonLine"
-              marginLeft={line.split(/\S/)[0].length * 2}
-            >
-              {styleRawTextLine(line.trim())}
-              <br></br>
-            </Box>
-          }
-        </Fragment>
+        <Box
+          key={"line_" + index}
+          className="jsonLine"
+          marginLeft={line.split(/\S/)[0].length * 2}
+        >
+          {styleRawTextLine(line.trim())}
+          <br></br>
+        </Box>
       ))}
     </div>
   );
