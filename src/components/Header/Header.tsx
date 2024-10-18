@@ -1,5 +1,5 @@
 import { HStack, Image } from "@chakra-ui/react";
-import meImage from "../../assets/img/geisel.png";
+import meImage from "/public/img/geisel.png";
 import PythonAbout from "./PythonAbout";
 
 const Header = () => {

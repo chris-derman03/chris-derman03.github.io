@@ -32,6 +32,22 @@ h2 {
     text-shadow: 0 0 5px white;
 }
 
+h3 {
+    color: rgb(189, 101, 123);
+    font-size: calc(var(--global-font-size)*1.5);
+    text-shadow: 0 0 2px white;
+}
+
+
+h4 {
+    color: #fffb51;
+    font-size: calc(var(--global-font-size));
+    text-shadow: 0 0 5px white;
+    word-wrap: normal;
+    max-width: 70%;
+    text-align: center;
+}
+
 /* =========================================================== */
 /* HEADER */
 
@@ -138,4 +154,26 @@ h2 {
 
 .myStoryLineNumbersContainer {
     color: rgb(141, 87, 177);
+}
+
+/* =========================================================== */
+/* EXPERIENCE */
+
+.timelinePointItemImage {
+    width: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    box-shadow: 0 0 15px white;
+}
+
+.timelinePointItem {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timelinePointItemLink:hover {
+    box-shadow: 0 0 20px rgb(189, 91, 10);
+    border-radius: 100%;
 }

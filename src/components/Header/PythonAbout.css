@@ -34,12 +34,10 @@
     color: rgb(242, 128, 208)
 }
 
-a {
+.pyCodeLink {
     position: relative;
     text-decoration: none;
-    color: black;
-  }
-a::after {
+} .pyCodeLink::after {
     content: "";
     position: absolute;
     width: 0;
@@ -48,6 +46,6 @@ a::after {
     left: 0;
     background-color: rgb(207, 116, 44);
     transition: width 0.3s;
-}a:hover::after {
+} .pyCodeLink:hover::after {
     width: 100%;
 }

@@ -1,11 +1,18 @@
-import { Stack } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+import ExperienceTree from "./ExperienceTree";
+import ExperienceTimeline from "../../data/ExperienceTimeline.json";
 
 const Experience = () => {
   return (
-    <Stack>
+    <Flex
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      className="bodySection"
+    >
       <h2>Experience Header</h2>
-      <h2>Experience</h2>
-    </Stack>
+      <ExperienceTree timelineData={ExperienceTimeline}></ExperienceTree>
+    </Flex>
   );
 };
 

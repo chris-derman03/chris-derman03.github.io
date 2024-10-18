@@ -1,0 +1,50 @@
+{
+    "timeline": [
+    {
+        "timelinePointItems": [
+            {
+                "company": "AGBU MDS",
+                "title": "K-12 School",
+                "range": ["Sep 2005", "Jun 2020"],
+                "cover": "/public/img/agbu_logo.webp",
+                "link": "https://www.agbumds.org"
+            }]
+    },
+    {
+        "timelinePointItems": [
+            {
+                "company": "TUMO",
+                "title": "Software Applications Intern",
+                "range": ["Jun 2019", "Jul 2019"],
+                "cover": "/public/img/tumo.webp",
+                "link": "https://tumo.org"
+            },
+            {
+                "company": "Seven Smarts LLC",
+                "title": "Software Engineer Intern",
+                "range": ["Jun 2019", "Jul 2019"],
+                "cover": "/public/img/7smart.webp",
+                "link": "https://www.7smarts.com"
+            }]
+    },
+    {
+        "timelinePointItems": [
+            {
+                "company": "Planet Bids",
+                "title": "Data Analyst Intern",
+                "range": ["Aug 2019", "Nov 2019"],
+                "cover": "/public/img/pb_logo.webp",
+                "link": "https://home.planetbids.com"
+            }]
+    },
+    {
+        "timelinePointItems": [
+            {
+                "company": "U.C. San Diego",
+                "title": "Data Science B.S.",
+                "range": ["Sep 2020", "Jun 2024"],
+                "cover": "/public/img/ucsd.webp",
+                "link": "https://ucsd.edu"
+            }]
+    }]
+}
