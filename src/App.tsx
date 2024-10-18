@@ -2,6 +2,7 @@ import background_loop from "./assets/videos/background_loop.mp4";
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import Header from "./components/Header/Header";
 import MyStory from "./components/MyStory/MyStory";
+import Experience from "./components/Experience/Experience";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <MyStory />
         </GridItem>
         <GridItem rowStart={3} colStart={2} bg="rgb(0,0,100,0.8)">
-          Body2
+          <Experience />
         </GridItem>
         <GridItem rowStart={4} colStart={2} bg="rgb(0,0,100,0.8)">
           Body3
