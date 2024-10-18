@@ -11,15 +11,15 @@
 }
 
 .pyVar {
-    color: rgb(20, 255, 224);
+    color: rgb(20, 161, 255);
 }
 
 .pyArg {
-    color: rgb(34, 119, 255);
+    color: rgb(34, 67, 255);
 }
 
 .pySyn1 {
-    color: rgb(175, 8, 22);
+    color: rgb(134, 36, 175);
 }
 
 .pySyn2 {
@@ -28,6 +28,10 @@
 
 .pyFun {
     color: rgb(255, 246, 161);
+}
+
+.pyLiteral {
+    color: rgb(242, 128, 208)
 }
 
 a {

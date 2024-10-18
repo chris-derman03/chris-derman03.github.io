@@ -7,6 +7,7 @@ const Header = () => {
     <div>
       <HStack spacing={100}>
         <Image
+          className="headerImage"
           alt="Christian"
           src={meImage}
           borderRadius="full"
