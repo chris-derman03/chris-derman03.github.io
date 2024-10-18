@@ -1,6 +1,6 @@
 import { HStack } from "@chakra-ui/react";
-import ExperienceTreeNode from "./ExperienceTreeNode";
-import { TimelinePoint } from "./ExperienceTreeNode";
+import ExperienceTreeLayer from "./ExperienceTreeLayer";
+import { TimelinePoint } from "./ExperienceTreeLayer";
 
 interface Props {
   timelineData: { timeline: TimelinePoint[] };
@@ -10,10 +10,10 @@ const ExperienceTree = ({ timelineData }: Props) => {
   return (
     <HStack spacing={50}>
       {timelineData.timeline.map((timelinePoint, index) => (
-        <ExperienceTreeNode
+        <ExperienceTreeLayer
           key={"timelinePoint_" + index}
           timelinePoint={timelinePoint}
-        ></ExperienceTreeNode>
+        />
       ))}
     </HStack>
   );
