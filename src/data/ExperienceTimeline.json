@@ -1,50 +1,43 @@
 {
     "timeline": [
     {
-        "timelinePointItems": [
-            {
-                "company": "AGBU MDS",
-                "title": "K-12 School",
-                "range": ["Sep 2005", "Jun 2020"],
-                "cover": "/public/img/agbu_logo.webp",
-                "link": "https://www.agbumds.org"
-            }]
+        "company": "AGBU MDS",
+        "title": "K-12 School",
+        "start": "2005",
+        "range": "15 Years",
+        "cover": "/public/img/agbu_logo.webp",
+        "link": "https://www.agbumds.org"
     },
     {
-        "timelinePointItems": [
-            {
-                "company": "TUMO",
-                "title": "Software Applications Intern",
-                "range": ["Jun 2019", "Jul 2019"],
-                "cover": "/public/img/tumo.webp",
-                "link": "https://tumo.org"
-            },
-            {
-                "company": "Seven Smarts LLC",
-                "title": "Software Engineer Intern",
-                "range": ["Jun 2019", "Jul 2019"],
-                "cover": "/public/img/7smart.webp",
-                "link": "https://www.7smarts.com"
-            }]
+        "company": "TUMO",
+        "title": "Software Applications Intern",
+        "start": "2019",
+        "range": "2 Months",
+        "cover": "/public/img/tumo.webp",
+        "link": "https://tumo.org"
     },
     {
-        "timelinePointItems": [
-            {
-                "company": "Planet Bids",
-                "title": "Data Analyst Intern",
-                "range": ["Aug 2019", "Nov 2019"],
-                "cover": "/public/img/pb_logo.webp",
-                "link": "https://home.planetbids.com"
-            }]
+        "company": "Seven Smarts LLC",
+        "title": "Software Engineer Intern",
+        "start": "2019",
+        "range": "2 Months",
+        "cover": "/public/img/7smart.webp",
+        "link": "https://www.7smarts.com"
     },
     {
-        "timelinePointItems": [
-            {
-                "company": "U.C. San Diego",
-                "title": "Data Science B.S.",
-                "range": ["Sep 2020", "Jun 2024"],
-                "cover": "/public/img/ucsd.webp",
-                "link": "https://ucsd.edu"
-            }]
+        "company": "Planet Bids",
+        "title": "Data Analyst Intern",
+        "start": "2019",
+        "range": "4 Months",
+        "cover": "/public/img/pb_logo.webp",
+        "link": "https://home.planetbids.com"
+    },
+    {
+        "company": "U.C. San Diego",
+        "title": "Data Science B.S.",
+        "start": "2020",
+        "range": "3 Years 10 Months",
+        "cover": "/public/img/ucsd.webp",
+        "link": "https://ucsd.edu"
     }]
 }

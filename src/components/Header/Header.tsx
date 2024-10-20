@@ -1,11 +1,11 @@
-import { HStack, Image } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
 import meImage from "/public/img/geisel.png";
 import PythonAbout from "./PythonAbout";
 
 const Header = () => {
   return (
     <div>
-      <HStack spacing={100}>
+      <Flex className="pageHeader" gap={100}>
         <Image
           className="headerImage"
           alt="Christian"
@@ -15,7 +15,7 @@ const Header = () => {
           objectFit="cover"
         ></Image>
         <PythonAbout />
-      </HStack>
+      </Flex>
     </div>
   );
 };

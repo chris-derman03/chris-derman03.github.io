@@ -8,11 +8,26 @@
 
 :root {
     --global-font-size: 10px;
+    --experience-margin: 10px;
+    --experience-year-width: 40px;
+    --experience-description-width: 200px;
+    --header-flex-direction: column;
+    --pyAbout-width: 80%;
 }
   
 @media (min-width: 768px) {
     :root {
         --global-font-size: 14px;
+        --experience-margin: 50px;
+        --experience-year-width: 60px;
+        --experience-description-width: auto;
+        --pyAbout-width: inherit;
+    }
+}
+
+@media (min-width: 1240px) {
+    :root {
+        --header-flex-direction: row;
     }
 }
 
@@ -29,7 +44,7 @@
 h2 {
     color: rgb(101, 183, 181);
     font-size: calc(var(--global-font-size) * 1.3);
-    text-shadow: 0 0 5px white;
+    text-shadow: 0 0 10px white;
 }
 
 h3 {
@@ -43,9 +58,14 @@ h4 {
     color: #fffb51;
     font-size: calc(var(--global-font-size));
     text-shadow: 0 0 5px white;
-    word-wrap: normal;
-    max-width: 70%;
-    text-align: center;
+    /* word-wrap: normal; */
+    /* max-width: 70%; */
+    /* text-align: center; */
+}
+
+h5 {
+    font-size: calc(var(--global-font-size)*1.5);
+    text-shadow: 0 0 5px white;
 }
 
 /* =========================================================== */
@@ -53,8 +73,9 @@ h4 {
 
 .pageHeader {
     display: flex;
-    justify-self: center;
-    align-self: center;
+    flex-direction: var(--header-flex-direction);
+    justify-content: center;
+    align-items: center;
     margin-top: 100px;
     margin-bottom: 100px;
 }
@@ -69,6 +90,8 @@ h4 {
     border-radius: 20px;
     box-shadow: inset 0 0 20px black;
     filter: drop-shadow(0 0 20px rgb(14, 4, 68));
+    width: var(--pyAbout-width);
+    overflow-x: auto;
 }
 
 .pyAboutHeader {
@@ -121,6 +144,8 @@ h4 {
     background-color: rgba(20, 7, 32, 0.6);
     box-shadow: 0 0 10px white;
     border-radius: 10px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .bodySectionHeader {
@@ -128,6 +153,8 @@ h4 {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     background-color: rgb(49, 31, 65);
+    width: 100%;
+    text-align: center;
 }
 
 .bodySectionBody {
@@ -159,21 +186,68 @@ h4 {
 /* =========================================================== */
 /* EXPERIENCE */
 
-.timelinePointNodeImage {
+#experience {
+    /* width: 800px; */
+}
+
+.experienceHeader {
+    font-size: calc(var(--global-font-size) * 2);
+}
+
+.timeline {
+    flex-direction: column-reverse;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: var(--experience-margin);
+}
+
+.timelineNodeYear {
+    width: var(--experience-year-width);
+    text-align: center;
+    text-shadow: 0 0 10px rgb(189, 91, 10);
+}
+
+.timelineNodeImage {
     width: 100px;
-    object-fit: cover;
     border-radius: 100%;
-    box-shadow: 0 0 15px white;
+    box-shadow: 0 0 20px white;
 }
 
-.timelinePointNode {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    flex-direction: column;
-    align-items: center;
+.timelineNodeLink {
+    border-radius: 50%;
+    position: relative;
+    transition: box-shadow 0.4s ease-in-out;
 }
 
-.timelinePointNodeLink:hover {
+
+.timelineNodeLink:hover {
     box-shadow: 0 0 20px rgb(189, 91, 10);
     border-radius: 100%;
+    box-shadow: 0 0 20px rgb(189, 91, 10), 
+                0 0 25px rgb(189, 91, 10);
+}
+
+.timelineNodeDescription {
+    flex-direction: column;
+    width: var(--experience-description-width);
+}
+
+.timelineDividerContainer {
+    width: 100px;
+    height: 100px;
+}
+
+.timelineDivider {
+    width: 1px;
+    margin: 0 auto;
+    height: inherit;
+    background-color: white;
+    box-shadow: 0 0 90px rgb(189, 91, 10),
+                0 0 80px rgb(189, 91, 10),
+                0 0 70px rgb(189, 91, 10),
+                0 0 60px rgb(189, 91, 10),
+                0 0 50px rgb(189, 91, 10),
+                0 0 40px rgb(189, 91, 10),
+                0 0 30px rgb(189, 91, 10);
+    
 }

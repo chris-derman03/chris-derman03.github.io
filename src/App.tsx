@@ -18,20 +18,20 @@ function App() {
         templateRows="auto repeat(5, auto)"
         rowGap={50}
       >
-        <GridItem rowStart={1} colSpan={3} className="pageHeader">
+        <GridItem rowStart={1} colSpan={3}>
           <Header />
         </GridItem>
         <GridItem rowStart={2} colStart={2}>
-          <MyStory />
-        </GridItem>
-        <GridItem rowStart={3} colStart={2}>
           <Experience />
+        </GridItem>
+        <GridItem rowStart={3} colStart={2} bg="rgb(0,0,100,0.8)">
+          Body2
         </GridItem>
         <GridItem rowStart={4} colStart={2} bg="rgb(0,0,100,0.8)">
           Body3
         </GridItem>
-        <GridItem rowStart={5} colStart={2} bg="rgb(0,0,100,0.8)">
-          Body4
+        <GridItem rowStart={5} colStart={2}>
+          <MyStory />
         </GridItem>
         <Show above="lg">
           <GridItem rowStart={3} colStart={3}>
