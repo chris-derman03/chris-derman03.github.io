@@ -7,6 +7,7 @@
 }
 
 :root {
+    --header-image-dimension: 200px;
     --global-font-size: 10px;
     --experience-margin: 10px;
     --experience-year-width: 40px;
@@ -17,6 +18,7 @@
   
 @media (min-width: 768px) {
     :root {
+        --header-image-dimension: 300px;
         --global-font-size: 14px;
         --experience-margin: 50px;
         --experience-year-width: 60px;
@@ -58,9 +60,6 @@ h4 {
     color: #fffb51;
     font-size: calc(var(--global-font-size));
     text-shadow: 0 0 5px white;
-    /* word-wrap: normal; */
-    /* max-width: 70%; */
-    /* text-align: center; */
 }
 
 h5 {
@@ -80,9 +79,22 @@ h5 {
     margin-bottom: 100px;
 }
 
+.headerImagesContainer {
+    position: relative;
+    width: var(--header-image-dimension);
+    height: var(--header-image-dimension);
+    justify-content: center;
+    align-items: center;
+}
+
 .headerImage {
     box-shadow: 0 0 20px white;
     border: solid rgba(189, 91, 10, 0.5) 4px;
+    border-radius: 100%;
+    width: var(--header-image-dimension);
+    height: var(--header-image-dimension);
+    transition: opacity 2s ease-in-out;
+    position: absolute;
 }
 
 .pyAboutContainer {

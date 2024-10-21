@@ -1,22 +1,14 @@
-import { Flex, Image } from "@chakra-ui/react";
-import meImage from "/public/img/geisel.png";
+import { Flex } from "@chakra-ui/react";
 import PythonAbout from "./PythonAbout";
+
+import HeaderImages from "./HeaderImages";
 
 const Header = () => {
   return (
-    <div>
-      <Flex className="pageHeader" gap={100}>
-        <Image
-          className="headerImage"
-          alt="Christian"
-          src={meImage}
-          borderRadius="full"
-          boxSize="300px"
-          objectFit="cover"
-        ></Image>
-        <PythonAbout />
-      </Flex>
-    </div>
+    <Flex className="pageHeader" gap={100}>
+      <HeaderImages />
+      <PythonAbout />
+    </Flex>
   );
 };
 
