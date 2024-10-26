@@ -11,7 +11,7 @@
             "title": "Using Pretrained Models to Generalize Different Tasks",
             "link": "https://github.com/chris-derman03/AI_generalization/blob/main/Report.pdf",
             "description": "Class project research question/proposal. (Cog Sci 181: Neural Networks and Deep Learning) Research question aimed to methodologically cut down training time and explore potential AGI capabilities of our current Machine Learning framework.",
-            "skill_set": ["Neural Networks", "Deep Learning", "Hyperparameter Tuning", "AGI"],
+            "skill_set": ["Neural Networks", "Deep Learning", "Hyperparameter Tuning", "AGI", "Machine Learning"],
             "date": "March 23, 2024"
         },
         {
@@ -25,7 +25,7 @@
             "title": "Hardware Acceleration of Deep Learning Algorithms",
             "link": "https://github.com/louiecai/DSC-180B-Hardware-Acceleration/blob/main/Project%20Showcase%20Poster.pdf",
             "description": "A Data Science approach to hardware acceleration of Deep Learning Model Executions. Area of study is HAR (Human Activity Recognition) Deep Learning Models.",
-            "skill_set": ["Deep Learning", "AWS", "Python", "PyTorch", "Computer Architecture"],
+            "skill_set": ["PyTorch", "AWS", "Machine Learning", "Computer Architecture", "Python", "Deep Learning"],
             "date": "March 15, 2024"
         },
         {
