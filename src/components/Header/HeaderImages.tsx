@@ -2,10 +2,7 @@ import { useEffect, useState } from "react";
 import { Flex, Image } from "@chakra-ui/react";
 
 const HeaderImages = () => {
-  const images = [
-    "/public/img/header/geisel.png",
-    "/public/img/header/dublin.png",
-  ];
+  const images = ["/img/header/geisel.png", "/img/header/dublin.png"];
   const [currentImageIdx, setCurrentImageIdx] = useState(0);
   const [isFading, setIsFading] = useState(false);
 
