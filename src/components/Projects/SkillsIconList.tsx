@@ -44,7 +44,13 @@ const SkillsIconList = ({ skills }: Props) => {
   return (
     <HStack gap={2}>
       {skills.map((skill, index) => (
-        <Tooltip label={skill} hasArrow key={"icon_" + index} bg="#fff6ec">
+        <Tooltip
+          label={skill}
+          hasArrow
+          key={"icon_" + index}
+          bg="#fff6ec"
+          color="black"
+        >
           <span>
             <Image src={iconMap[skill] as string} boxSize={7} alt={skill} />
           </span>
