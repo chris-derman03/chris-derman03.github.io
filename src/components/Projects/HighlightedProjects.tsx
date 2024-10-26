@@ -11,7 +11,7 @@ const HighlightedProjects = ({ projectsData }: Props) => {
   return (
     <Flex className="projectList" gap={10}>
       {projects.map((project, index) => (
-        <ProjectNode key={"project_" + index} project={project} />
+        <ProjectNode key={"project_" + index} project={project} idx={index} />
       ))}
     </Flex>
   );
