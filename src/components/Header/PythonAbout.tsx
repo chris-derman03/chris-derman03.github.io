@@ -18,10 +18,11 @@ const PythonAbout = () => {
   return (
     <Grid templateRows="8% 92%" className="pyAboutContainer">
       <GridItem rowSpan={1} className="pyAboutHeader">
-        <HStack className="pyAboutNav">
-          <Image boxSize={7} src={pythonLogo}></Image>
-          <p className="pyAboutTab">Christian_DerManuelian.py</p>
+        <HStack className="pyAboutLogo">
+          <Image boxSize={7} src={pythonLogo} />
         </HStack>
+        <p className="pyAboutTab">Christian_DerManuelian.py</p>
+        <div className="pyAboutHeaderFiller"></div>
       </GridItem>
       <GridItem rowStart={2} margin={0} className="pyAboutBody">
         <HStack
