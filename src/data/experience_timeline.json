@@ -5,7 +5,7 @@
         "title": "K-12 School",
         "start": "2005",
         "range": "15 Years",
-        "cover": "/public/img/agbu_logo.webp",
+        "cover": "/img/agbu_logo.webp",
         "link": "https://www.agbumds.org"
     },
     {
@@ -13,7 +13,7 @@
         "title": "Software Applications Intern",
         "start": "2019",
         "range": "2 Months",
-        "cover": "/public/img/tumo.webp",
+        "cover": "/img/tumo.webp",
         "link": "https://tumo.org"
     },
     {
@@ -21,7 +21,7 @@
         "title": "Software Engineer Intern",
         "start": "2019",
         "range": "2 Months",
-        "cover": "/public/img/7smart.webp",
+        "cover": "/img/7smart.webp",
         "link": "https://www.7smarts.com"
     },
     {
@@ -29,7 +29,7 @@
         "title": "Data Analyst Intern",
         "start": "2019",
         "range": "4 Months",
-        "cover": "/public/img/pb_logo.webp",
+        "cover": "/img/pb_logo.webp",
         "link": "https://home.planetbids.com"
     },
     {
@@ -37,7 +37,7 @@
         "title": "Data Science B.S.",
         "start": "2020",
         "range": "3 Years 10 Months",
-        "cover": "/public/img/ucsd.webp",
+        "cover": "/img/ucsd.webp",
         "link": "https://ucsd.edu"
     }]
 }
