@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "title": "Using Pretrained Models to Generalize Different Tasks",
+            "link": "https://github.com/chris-derman03/AI_generalization",
+            "description": "Class project research question/proposal. (Cog Sci 181: Neural Networks and Deep Learning) Research question aimed to methodologically cut down training time and explore potential AGI capabilities of our current Machine Learning framework.",
+            "skill_set": ["NeuralNetworks", "Deep Learning"],
+            "date": "March 23, 2024"
+        },
+        {
+            "title": "Are LLMs Sensitive to Logic-Based Word Prediction?",
+            "link": "https://github.com/chris-derman03/LLM_logic/blob/main/Report.pdf",
+            "description": "Class project research question/proposal. (Cog Sci 150: Large Language Models) Are LLM's (ChatGPT-2) Able to Solve Logic-Based Problems?",
+            "skill_set": ["Deep Learning", "LLMs", "Prompt Engineering"],
+            "date": "March 21, 2024"
+        }
+    ]
+}

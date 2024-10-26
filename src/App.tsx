@@ -3,6 +3,7 @@ import background_loop from "/public/videos/background_loop.mp4";
 import Header from "./components/Header/Header";
 import MyStory from "./components/MyStory/MyStory";
 import Experience from "./components/Experience/Experience";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   return (
@@ -22,10 +23,10 @@ function App() {
           <Header />
         </GridItem>
         <GridItem rowStart={2} colStart={2}>
-          <Experience />
+          <Projects />
         </GridItem>
-        <GridItem rowStart={3} colStart={2} bg="rgb(0,0,100,0.8)">
-          Body2
+        <GridItem rowStart={3} colStart={2}>
+          <Experience />
         </GridItem>
         <GridItem rowStart={4} colStart={2} bg="rgb(0,0,100,0.8)">
           Body3
