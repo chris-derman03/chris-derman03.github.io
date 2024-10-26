@@ -24,6 +24,7 @@ const ProjectNode = ({ project, idx }: Props) => {
           hasArrow
           isOpen={idx === 0}
           offset={[0, 30]}
+          bg="#fff6ec"
         >
           <a
             className="textLink projectLink"

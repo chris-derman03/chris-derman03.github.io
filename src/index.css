@@ -70,6 +70,7 @@ h4 {
 }
 
 h5 {
+    color: white;
     font-size: calc(var(--global-font-size)*1.5);
     text-shadow: 0 0 5px white;
 }
@@ -254,7 +255,7 @@ h6 {
 .timelineNodeYear {
     width: var(--experience-year-width);
     text-align: center;
-    text-shadow: 0 0 10px rgb(189, 91, 10);
+    text-shadow: 0 0 10px var(--theme-color-1);
 }
 
 .timelineNodeImage {
