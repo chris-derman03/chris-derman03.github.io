@@ -2,7 +2,7 @@ import { useState } from "react";
 import parse from "html-react-parser";
 import { Grid, GridItem, HStack, Image } from "@chakra-ui/react";
 import "./PythonAbout.css";
-import pythonLogo from "/public/img/python_logo.png";
+import pythonLogo from "/public/img/python.webp";
 import pyAbout from "../../data/pyAbout.txt";
 import LineNumbers from "../LineNumbers";
 

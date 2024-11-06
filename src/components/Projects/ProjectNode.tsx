@@ -1,5 +1,5 @@
 import { Flex, HStack } from "@chakra-ui/react";
-import SkillsIconList from "./SkillsIconList";
+import SkillsIconList from "../SkillsIconList";
 
 export interface Project {
   title: string;

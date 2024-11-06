@@ -1,4 +1,4 @@
-import { HStack, Tooltip, Image } from "@chakra-ui/react";
+import { Tooltip, Image, Flex } from "@chakra-ui/react";
 
 const iconMap: { [key: string]: string } = {
   "Neural Networks": "/img/nn.webp",
@@ -7,7 +7,7 @@ const iconMap: { [key: string]: string } = {
   AGI: "/img/agi.webp",
   "Prompt Engineering": "/img/prompt_eng.webp",
   LLMs: "/img/transformer.webp",
-  Python: "/img/python_logo.png",
+  Python: "/img/python.webp",
   pandas: "/img/pandas.webp",
   PyTorch: "/img/pytorch.webp",
   sklearn: "/img/sklearn.webp",
@@ -25,7 +25,7 @@ const iconMap: { [key: string]: string } = {
   Matplotlib: "/img/matplotlib.webp",
   TensorFlow: "/img/tensorflow.webp",
   Keras: "/img/keras.webp",
-  "Convolutional Neural Network": "/img/cnn.webp",
+  "Convolutional Neural Networks": "/img/cnn.webp",
   "Machine Learning": "/img/ml.webp",
   Pygame: "/img/pygame.webp",
   "Event Loops": "/img/event_loop.webp",
@@ -34,15 +34,42 @@ const iconMap: { [key: string]: string } = {
   Linux: "/img/linux.webp",
   "Linear Regression": "/img/Regression.webp",
   Statistics: "/img/stats.webp",
+  "C++": "/img/cpp.webp",
+  SQL: "/img/sql.webp",
+  C: "/img/c.webp",
+  Java: "/img/java.webp",
+  R: "/img/r.webp",
+  MATLAB: "/img/matlab.webp",
+  "Reinforcement Learning": "/img/reinforcement.webp",
+  "Principal Component Analysis": "/img/pca.webp",
+  KNN: "/img/knn.webp",
+  Perceptrons: "/img/perceptron.webp",
+  "Gradient Descent": "/img/grad_descent.webp",
+  "Support Vector Machines": "/img/svm.webp",
+  "Naive Bayes": "/img/nb.webp",
+  "Maximum Likelihood Estimation": "/img/mle.webp",
+  "Decision Trees": "/img/d_tree.webp",
+  "Random Forests": "/img/rand_forest.webp",
+  PySpark: "/img/spark.webp",
+  seaborn: "/img/seaborn.webp",
+  SciPy: "/img/scipy.webp",
+  Dask: "/img/dask.webp",
+  "D3.js": "/img/d3.webp",
+  PostgreSQL: "/img/postgresql.webp",
+  "Web Scraping": "/img/webscraping.webp",
+  "ARM32 Assembly": "/img/arm32.webp",
+  UNIX: "/img/unix.webp",
+  "Apache Airflow": "/img/airflow.webp",
 };
 
 interface Props {
   skills: string[];
+  size?: number;
 }
 
-const SkillsIconList = ({ skills }: Props) => {
+const SkillsIconList = ({ skills, size = 7 }: Props) => {
   return (
-    <HStack gap={2}>
+    <Flex gap={4} wrap="wrap">
       {skills.map((skill, index) => (
         <Tooltip
           label={skill}
@@ -52,11 +79,16 @@ const SkillsIconList = ({ skills }: Props) => {
           color="black"
         >
           <span>
-            <Image src={iconMap[skill] as string} boxSize={7} alt={skill} />
+            <Image
+              src={iconMap[skill] as string}
+              boxSize={size}
+              alt={skill}
+              borderRadius={10}
+            />
           </span>
         </Tooltip>
       ))}
-    </HStack>
+    </Flex>
   );
 };
 

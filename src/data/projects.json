@@ -39,7 +39,7 @@
             "title": "Image Classifer (Convolutional Neural Network)",
             "link": "https://github.com/chris-derman03/chess_piece_classifier/blob/master/train.ipynb",
             "description": "Trained a Convolutional Neural Network to classify images of chess pieces.",
-            "skill_set": ["TensorFlow", "Keras", "Convolutional Neural Network", "Machine Learning", "Python", "NumPy", "Jupyter"],
+            "skill_set": ["TensorFlow", "Keras", "Convolutional Neural Networks", "Machine Learning", "Python", "NumPy", "Jupyter"],
             "date": "November 4, 2023"
         },
         {

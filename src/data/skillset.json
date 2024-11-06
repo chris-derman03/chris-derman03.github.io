@@ -1,0 +1,7 @@
+{
+    "Programming Languages": ["Python", "C++", "SQL", "JavaScript", "TypeScript", "C", "Java", "R", "ARM32 Assembly", "MATLAB"],
+    "AI & Machine Learning": ["TensorFlow", "PyTorch", "Keras", "Convolutional Neural Networks", "LLMs", "Neural Networks", "Deep Learning", "Hyperparameter Tuning", "Feature Engineering", "Reinforcement Learning", "AGI", "Principal Component Analysis", "Prompt Engineering", "KNN", "Linear Regression", "Perceptrons", "Gradient Descent", "Support Vector Machines", "Naive Bayes", "Maximum Likelihood Estimation", "Decision Trees", "Random Forests"],
+    "Python Data Science Tools": ["pandas", "NumPy", "Matplotlib", "sklearn", "seaborn", "PySpark", "SciPy", "Dask"],
+    "Web Development": ["React.js", "Vite", "JavaScript", "TypeScript", "D3.js", "HTML", "CSS"],
+    "Other": ["PostgreSQL", "Web Scraping", "UNIX", "Apache Airflow", "AWS", "Computer Architecture", "Pygame", "Event Loops", "Circuits", "Raspberry Pi", "Linux"]
+}
