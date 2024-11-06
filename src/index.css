@@ -19,7 +19,7 @@
     --theme-color-b: rgb(49, 31, 65, 0.8);
     --theme-color-c: rgb(141, 87, 177);
     --theme-color-1: rgb(101, 183, 181);
-    --theme-color-2: rgb(189, 101, 123);
+    --theme-color-2: rgb(199, 113, 134);
     --theme-color-3: rgb(255, 251, 81);
 }
   
@@ -78,7 +78,7 @@ h2 {
 h3 {
     color: var(--theme-color-2);
     font-size: calc(var(--global-font-size)*1.8);
-    text-shadow: 0 0 2px white;
+    text-shadow: 0 0 2px rgb(187, 64, 64);
 }
 
 
@@ -158,6 +158,46 @@ h6 {
     background-color: var(--theme-color-b);
 }
 
+/* =========================================================== */
+/* BODY */
+
+.content {
+    margin-left: 250px;
+    overflow-y: scroll;
+    height: 100vh;
+    flex-grow: 1;
+}
+
+.bodySection {
+    margin-top: 800px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: var(--theme-color-a);
+    box-shadow: 0 0 10px var(--theme-color-1);
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    backdrop-filter: blur(8px);
+}
+
+.bodySectionHeader {
+    background-color: var(--theme-color-b);
+    box-shadow: 0 0 10px var(--theme-color-1);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+    text-align: center;
+
+    .bodySectionHeaderTitle {
+        font-size: calc(var(--global-font-size) * 2);
+    }
+}
+
+.bodySectionBody {
+    font-size: calc(var(--global-font-size));
+    overflow: clip;
+    padding-bottom: 4px;
+}
 
 /* =========================================================== */
 /* HEADER */
@@ -244,48 +284,6 @@ h6 {
 .pyAboutLineNumbersContainer {
     color: rgb(28, 62, 172);
     padding-top: 1px;
-}
-
-
-/* =========================================================== */
-/* BODY */
-
-.content {
-    margin-left: 250px;
-    overflow-y: scroll;
-    height: 100vh;
-    flex-grow: 1;
-}
-
-.bodySection {
-    margin-top: 800px;
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: var(--theme-color-a);
-    box-shadow: 0 0 10px var(--theme-color-1);
-    border-radius: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    backdrop-filter: blur(8px);
-}
-
-.bodySectionHeader {
-    background-color: var(--theme-color-b);
-    box-shadow: 0 0 10px var(--theme-color-1);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    width: 100%;
-    text-align: center;
-
-    .bodySectionHeaderTitle {
-        font-size: calc(var(--global-font-size) * 2);
-    }
-}
-
-.bodySectionBody {
-    font-size: calc(var(--global-font-size));
-    overflow: clip;
-    padding-bottom: 4px;
 }
 
 /* =========================================================== */

@@ -1,4 +1,4 @@
-import { Flex, Grid, GridItem, Show } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import background_loop from "/public/videos/background_loop.mp4";
 import Header from "./components/Header/Header";
 import MyStory from "./components/MyStory/MyStory";

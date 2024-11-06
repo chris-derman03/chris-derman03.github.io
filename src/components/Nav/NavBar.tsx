@@ -2,9 +2,11 @@ import { Flex } from "@chakra-ui/react";
 const scrollSections = ["About", "Experience", "Projects", "Skills", "Story"];
 
 const handleClick = (sectionId: string): void => {
+  const body = document.getElementsByClassName("content")[0];
   const section = document.getElementById(sectionId);
   if (section) {
-    section.scrollIntoView({
+    body.scrollTo({
+      top: section.offsetTop - 100,
       behavior: "smooth",
     });
   }
