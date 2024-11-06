@@ -1,14 +1,28 @@
-import { Button, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+const scrollSections = ["About", "Experience", "Projects", "Skills", "Story"];
 
-const handleClick = () => {};
+const handleClick = (sectionId: string): void => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+};
 
 const NavBar = () => {
   return (
-    <Flex id="nav">
-      <Flex flexDir={"column"} id="scrollNav">
-        <Button onClick={handleClick}>1</Button>
-        <Button onClick={handleClick}>2</Button>
-        <Button onClick={handleClick}>3</Button>
+    <Flex className="nav">
+      <Flex flexDir={"column"} className="scrollPoints" gap={0}>
+        {scrollSections.map((section) => (
+          <button
+            className="navButton"
+            key={section + "_navButton"}
+            onClick={() => handleClick(section)}
+          >
+            {<h2>{section}</h2>}
+          </button>
+        ))}
       </Flex>
     </Flex>
   );

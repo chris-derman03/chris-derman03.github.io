@@ -2,16 +2,16 @@ import ExperienceTimeline from "./ExperienceTimeline";
 import ExperienceTimelineData from "../../data/experience_timeline.json";
 import BodySection from "../BodySection";
 
-const Experience = () => {
+interface Props {
+  id: string;
+}
+
+const Experience = ({ id }: Props) => {
   return (
     <BodySection
-      id="experience"
+      id={id}
       headerText="Experience"
-      children={
-        <ExperienceTimeline
-          timelineData={ExperienceTimelineData}
-        ></ExperienceTimeline>
-      }
+      children={<ExperienceTimeline timelineData={ExperienceTimelineData} />}
     />
   );
 };

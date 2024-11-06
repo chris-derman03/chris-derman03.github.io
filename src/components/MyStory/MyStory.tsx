@@ -6,7 +6,11 @@ import story from "../../data/story.txt";
 import JSONCode from "./JSONCode";
 import LineNumbers from "../LineNumbers";
 
-const MyStory = () => {
+interface Props {
+  id: string;
+}
+
+const MyStory = ({ id }: Props) => {
   const divRef = useRef<HTMLDivElement | null>(null);
   const [codeBodyHeight, setCodeBodyHeight] = useState(0);
 
@@ -17,7 +21,7 @@ const MyStory = () => {
   }, []);
 
   return (
-    <div className="bodySection">
+    <div className="bodySection" id={id}>
       <Grid templateColumns="90% 10%" templateRows="40px 1fr" rowGap={2}>
         <GridItem rowStart={1} colSpan={2} className="bodySectionHeader">
           <HStack

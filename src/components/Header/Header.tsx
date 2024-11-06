@@ -3,9 +3,13 @@ import PythonAbout from "./PythonAbout";
 
 import HeaderImages from "./HeaderImages";
 
-const Header = () => {
+interface Props {
+  id: string;
+}
+
+const Header = ({ id }: Props) => {
   return (
-    <Flex className="pageHeader" gap={100}>
+    <Flex className="pageHeader" gap={100} id={id}>
       <HeaderImages />
       <PythonAbout />
     </Flex>

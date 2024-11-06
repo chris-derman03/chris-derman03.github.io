@@ -2,10 +2,14 @@ import HighlightedProjects from "./HighlightedProjects";
 import ProjectData from "../../data/projects.json";
 import BodySection from "../BodySection";
 
-const Projects = () => {
+interface Props {
+  id: string;
+}
+
+const Projects = ({ id }: Props) => {
   return (
     <BodySection
-      id="projects"
+      id={id}
       headerText="Projects"
       children={<HighlightedProjects projectsData={ProjectData} />}
     />

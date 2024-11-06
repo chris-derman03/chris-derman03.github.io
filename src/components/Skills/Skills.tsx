@@ -2,10 +2,14 @@ import BodySection from "../BodySection";
 import SkillsBody from "./SkillsBody";
 import skillset from "../../data/skillset.json";
 
-export const Skills = () => {
+interface Props {
+  id: string;
+}
+
+export const Skills = ({ id }: Props) => {
   return (
     <BodySection
-      id="skills"
+      id={id}
       headerText="Skills"
       children={<SkillsBody skillset={skillset} />}
     />

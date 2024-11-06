@@ -61,10 +61,18 @@
     }
 }
 
+.pageContainer {
+    display: flex;
+    height: 100vh;
+}
+
+/* =========================================================== */
+/* Text */
+
 h2 {
     color: var(--theme-color-1);
     font-size: calc(var(--global-font-size) * 1.3);
-    text-shadow: 0 0 10px white;
+    text-shadow: 0 0 2px white;
 }
 
 h3 {
@@ -127,13 +135,27 @@ h6 {
 /* =========================================================== */
 /* NavBar */
 
-#nav {
-    width: 200px;
-    height: 80%;
-    background-color: var(--theme-color-a);
+.nav {
     position: fixed;
-    justify-content: center;
-    box-shadow: 0 0 10px white;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--theme-color-a);
+    box-shadow: 0 0 10px var(--theme-color-1);
+}
+
+.scrollPoints {
+    width: 100%;
+}
+
+.navButton {
+    background-color: var(--theme-color-a);
+    border-radius: 4px;
+    padding: 4px;
+    border: solid black 1px;
+} .navButton:hover {
+    background-color: var(--theme-color-b);
 }
 
 
@@ -146,7 +168,6 @@ h6 {
     justify-content: center;
     align-items: center;
     margin-top: 200px;
-    margin-bottom: 100px;
 }
 
 .headerImagesContainer {
@@ -158,8 +179,8 @@ h6 {
 }
 
 .headerImage {
-    box-shadow: 0 0 20px white;
-    border: solid white 4px;
+    box-shadow: 0 0 20px var(--theme-color-1);
+    border: solid var(--theme-color-1) 2px;
     border-radius: 100%;
     width: var(--header-image-dimension);
     height: var(--header-image-dimension);
@@ -229,9 +250,19 @@ h6 {
 /* =========================================================== */
 /* BODY */
 
+.content {
+    margin-left: 250px;
+    overflow-y: scroll;
+    height: 100vh;
+    flex-grow: 1;
+}
+
 .bodySection {
+    margin-top: 800px;
+    margin-left: 10%;
+    margin-right: 10%;
     background-color: var(--theme-color-a);
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 10px var(--theme-color-1);
     border-radius: 10px;
     flex-direction: column;
     align-items: flex-start;
@@ -240,7 +271,7 @@ h6 {
 
 .bodySectionHeader {
     background-color: var(--theme-color-b);
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 10px var(--theme-color-1);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     width: 100%;
@@ -279,10 +310,6 @@ h6 {
 
 /* =========================================================== */
 /* EXPERIENCE */
-
-#experience {
-    width: min(100%, 100%);
-}
 
 .timeline {
     flex-direction: column-reverse;
@@ -355,4 +382,11 @@ h6 {
 
 .projectNode {
     flex-direction: column;
+}
+
+/* =========================================================== */
+/* Footer */
+
+.footer {
+    background-color: var(--theme-color-b);
 }
