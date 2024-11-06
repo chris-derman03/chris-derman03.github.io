@@ -14,6 +14,8 @@
     --experience-description-width: 200px;
     --header-flex-direction: column;
     --pyAbout-width: 80%;
+    --nav-width: 0;
+    --nav-display: none;
 
     --theme-color-a: rgba(20, 7, 32, 0.4);
     --theme-color-b: rgb(49, 31, 65, 0.8);
@@ -31,6 +33,8 @@
         --experience-year-width: 60px;
         --experience-description-width: auto;
         --pyAbout-width: inherit;
+        --nav-width: 250px;
+        --nav-display: block;
     }
 }
 
@@ -139,7 +143,7 @@ h6 {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
+    width: var(--nav-width);
     height: 100vh;
     background-color: var(--theme-color-a);
     box-shadow: 0 0 10px var(--theme-color-1);
@@ -150,6 +154,7 @@ h6 {
 }
 
 .navButton {
+    display: var(--nav-display);
     background-color: var(--theme-color-a);
     border-radius: 4px;
     padding: 4px;
@@ -162,7 +167,7 @@ h6 {
 /* BODY */
 
 .content {
-    margin-left: 250px;
+    margin-left: var(--nav-width);
     overflow-y: scroll;
     height: 100vh;
     flex-grow: 1;
