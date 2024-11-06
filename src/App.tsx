@@ -5,6 +5,7 @@ import MyStory from "./components/MyStory/MyStory";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import { Skills } from "./components/Skills/Skills";
+import NavBar from "./components/Nav/NavBar";
 
 function App() {
   return (
@@ -18,16 +19,17 @@ function App() {
           lg: "17.5% 65% 17.5%",
         }}
         templateRows="auto repeat(5, auto)"
-        rowGap={50}
+        rowGap={1000}
       >
         <GridItem rowStart={1} colSpan={3}>
+          <NavBar />
           <Header />
         </GridItem>
         <GridItem rowStart={2} colStart={2}>
-          <Projects />
+          <Experience />
         </GridItem>
         <GridItem rowStart={3} colStart={2}>
-          <Experience />
+          <Projects />
         </GridItem>
         <GridItem rowStart={4} colStart={2}>
           <Skills />

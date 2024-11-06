@@ -125,6 +125,19 @@ h6 {
 }
 
 /* =========================================================== */
+/* NavBar */
+
+#nav {
+    width: 200px;
+    height: 80%;
+    background-color: var(--theme-color-a);
+    position: fixed;
+    justify-content: center;
+    box-shadow: 0 0 10px white;
+}
+
+
+/* =========================================================== */
 /* HEADER */
 
 .pageHeader {
@@ -132,7 +145,7 @@ h6 {
     flex-direction: var(--header-flex-direction);
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 200px;
     margin-bottom: 100px;
 }
 
