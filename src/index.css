@@ -175,9 +175,6 @@ h6 {
 }
 
 .bodySection {
-    margin-top: 800px;
-    margin-left: 10%;
-    margin-right: 10%;
     background-color: var(--theme-color-a);
     box-shadow: 0 0 10px var(--theme-color-1);
     border-radius: 10px;
@@ -306,27 +303,13 @@ h6 {
 }
 
 /* =========================================================== */
-/* STORY */
-
-.myStoryLineNumber {
-    font-size: 10px;
-}
-
-.fileLogo {
-    font-size: calc(var(--global-font-size) * 1.9);
-    color: var(--theme-color-3);
-}
-
-.myStoryLineNumber {
-    font-size: calc(var(--global-font-size));
-}
-
-.myStoryLineNumbersContainer {
-    color: var(--theme-color-c);
-}
-
-/* =========================================================== */
 /* EXPERIENCE */
+
+#Experience { 
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 400px;
+}
 
 .timeline {
     flex-direction: column-reverse;
@@ -388,8 +371,10 @@ h6 {
 /* =========================================================== */
 /* Projects */
 
-.projects {
-    width: min(100%, 100%);
+#Projects { 
+    width: 60%;
+    margin-left: 10%;
+    margin-top: 300px;
 }
 
 .projectList {
@@ -399,6 +384,41 @@ h6 {
 
 .projectNode {
     flex-direction: column;
+}
+
+/* =========================================================== */
+/* Skills */
+
+#Skills { 
+    width: 60%;
+    margin-left: 30%;
+    margin-top: 300px;
+}
+
+/* =========================================================== */
+/* STORY */
+
+#Story { 
+    width: 60%;
+    margin-left: 10%;
+    margin-top: 300px;
+}
+
+.myStoryLineNumber {
+    font-size: 10px;
+}
+
+.fileLogo {
+    font-size: calc(var(--global-font-size) * 1.9);
+    color: var(--theme-color-3);
+}
+
+.myStoryLineNumber {
+    font-size: calc(var(--global-font-size));
+}
+
+.myStoryLineNumbersContainer {
+    color: var(--theme-color-c);
 }
 
 /* =========================================================== */
