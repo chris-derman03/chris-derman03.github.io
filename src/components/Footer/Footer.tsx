@@ -10,7 +10,7 @@ const Footer = () => {
       alignItems={"center"}
     >
       <Links />
-      <h1>©2024 Christian DerManuelian</h1>
+      <h1 style={{ color: "white" }}>©2024 Christian DerManuelian</h1>
     </Flex>
   );
 };
