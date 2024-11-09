@@ -10,7 +10,7 @@ const Projects = ({ id }: Props) => {
   return (
     <BodySection
       id={id}
-      headerText="Projects"
+      headerText="💾 Projects 🖥️"
       children={<HighlightedProjects projectsData={ProjectData} />}
     />
   );

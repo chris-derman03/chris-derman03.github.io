@@ -148,10 +148,12 @@ h6 {
     background-color: var(--theme-color-a);
     box-shadow: 0 0 10px var(--theme-color-1);
     backdrop-filter: blur(8px);
+    align-items: center;
 }
 
-.scrollPoints {
+.navSection {
     width: 100%;
+    box-shadow: 0 0 10px var(--theme-color-1);
 }
 
 .navButton {
@@ -160,6 +162,7 @@ h6 {
     border-radius: 4px;
     padding: 4px;
     border: solid black 1px;
+    text-align: left;
 } .navButton:hover {
     background-color: var(--theme-color-b);
 }

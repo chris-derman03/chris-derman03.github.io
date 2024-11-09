@@ -10,7 +10,7 @@ export const Skills = ({ id }: Props) => {
   return (
     <BodySection
       id={id}
-      headerText="Skills"
+      headerText="⚙️ Skills 🛠️"
       children={<SkillsBody skillset={skillset} />}
     />
   );

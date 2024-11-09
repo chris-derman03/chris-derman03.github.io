@@ -10,7 +10,7 @@ const Experience = ({ id }: Props) => {
   return (
     <BodySection
       id={id}
-      headerText="Experience"
+      headerText="🧑‍💻 Experience 💼"
       children={<ExperienceTimeline timelineData={ExperienceTimelineData} />}
     />
   );
