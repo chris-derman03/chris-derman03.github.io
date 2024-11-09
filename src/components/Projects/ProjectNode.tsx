@@ -18,12 +18,8 @@ const ProjectNode = ({ project, idx }: Props) => {
   return (
     <Flex className="projectNode" gap={2}>
       <HStack gap={5}>
-        <h3>
-          <a
-            className="textLink projectLink"
-            href={project.link}
-            target="_blank"
-          >
+        <h3 className="projectLink">
+          <a className="textLink" href={project.link} target="_blank">
             {project.title}
           </a>
         </h3>

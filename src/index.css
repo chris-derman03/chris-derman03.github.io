@@ -122,6 +122,7 @@ h6 {
 .textLink {
     position: relative;
     text-decoration: none;
+    
 } .textLink::after {
     content: "";
     position: absolute;
@@ -134,6 +135,7 @@ h6 {
 } 
 .textLink:hover::after {
     width: 100%;
+    
 }
 
 /* =========================================================== */
@@ -163,8 +165,10 @@ h6 {
     padding: 4px;
     border: solid black 1px;
     text-align: left;
+    transition: transform 0.3s ease, color, 0.3s ease;
 } .navButton:hover {
     background-color: var(--theme-color-b);
+    transform: scale(0.99);
 }
 
 /* =========================================================== */
@@ -312,6 +316,7 @@ h6 {
     width: 50%;
     margin-left: 25%;
     margin-top: 400px;
+    position: relative;
 }
 
 .timeline {
@@ -335,7 +340,6 @@ h6 {
 
 .timelineNodeLink {
     border-radius: 50%;
-    position: relative;
     transition: box-shadow 0.4s ease-in-out;
 }
 
@@ -367,8 +371,7 @@ h6 {
                 0 0 60px rgb(189, 91, 10),
                 0 0 50px rgb(189, 91, 10),
                 0 0 40px rgb(189, 91, 10),
-                0 0 30px rgb(189, 91, 10);
-    
+                0 0 30px rgb(189, 91, 10);    
 }
 
 /* =========================================================== */
@@ -387,6 +390,14 @@ h6 {
 
 .projectNode {
     flex-direction: column;
+}
+
+.projectLink {
+    transition: transform 0.3s ease;
+}
+
+.projectLink:hover {
+    transform: scale(0.98);
 }
 
 /* =========================================================== */
@@ -429,4 +440,19 @@ h6 {
 
 .footer {
     background-color: var(--theme-color-b);
+    flex-direction: column;
+    height: 150px;
+    backdrop-filter: blur(4px);
+    margin-top: 150px;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px white;
+}
+
+.footerLink {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footerLink:hover {
+    color: var(--theme-color-1);
+    transform: scale(0.9);
 }

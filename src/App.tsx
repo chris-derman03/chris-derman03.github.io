@@ -6,6 +6,7 @@ import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import { Skills } from "./components/Skills/Skills";
 import NavBar from "./components/Nav/NavBar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Projects id="Projects" />
           <Skills id="Skills" />
           <MyStory id="Story" />
-          <div className="footer">footer</div>
+          <Footer />
         </Flex>
       </div>
     </>
