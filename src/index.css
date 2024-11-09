@@ -150,7 +150,7 @@ h6 {
     background-color: var(--theme-color-a);
     box-shadow: 0 0 10px var(--theme-color-1);
     backdrop-filter: blur(8px);
-    align-items: center;
+    /* align-items: center; */
 }
 
 .navSection {
