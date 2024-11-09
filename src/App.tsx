@@ -7,8 +7,28 @@ import Projects from "./components/Projects/Projects";
 import { Skills } from "./components/Skills/Skills";
 import NavBar from "./components/Nav/NavBar";
 import Footer from "./components/Footer/Footer";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <>
       <video autoPlay muted loop id="bg-video">

@@ -12,6 +12,7 @@ const Projects = ({ id }: Props) => {
       id={id}
       headerText="💾 Projects 🖥️"
       children={<HighlightedProjects projectsData={ProjectData} />}
+      hiddenDirection="hiddenLeft"
     />
   );
 };

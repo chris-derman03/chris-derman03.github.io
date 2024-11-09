@@ -12,6 +12,7 @@ export const Skills = ({ id }: Props) => {
       id={id}
       headerText="⚙️ Skills 🛠️"
       children={<SkillsBody skillset={skillset} />}
+      hiddenDirection="hiddenRight"
     />
   );
 };

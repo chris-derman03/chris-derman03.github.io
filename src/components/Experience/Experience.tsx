@@ -12,6 +12,7 @@ const Experience = ({ id }: Props) => {
       id={id}
       headerText="🧑‍💻 Experience 💼"
       children={<ExperienceTimeline timelineData={ExperienceTimelineData} />}
+      hiddenDirection=""
     />
   );
 };

@@ -21,7 +21,7 @@ const MyStory = ({ id }: Props) => {
   }, []);
 
   return (
-    <div className="bodySection" id={id}>
+    <div className="bodySection hidden hiddenLeft" id={id}>
       <Grid templateColumns="90% 10%" templateRows="40px 1fr" rowGap={2}>
         <GridItem rowStart={1} colSpan={2} className="bodySectionHeader">
           <HStack
