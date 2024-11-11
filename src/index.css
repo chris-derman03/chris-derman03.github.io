@@ -158,6 +158,10 @@ h6 {
     transform: translateX(100%);
 }
 
+.hiddenDelayed {
+    transition-delay: 1ms;
+}
+
 .show {
     opacity: 1;
     filter: blur(0);

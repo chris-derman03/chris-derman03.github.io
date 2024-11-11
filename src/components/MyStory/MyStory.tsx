@@ -35,7 +35,11 @@ const MyStory = ({ id }: Props) => {
             <h2>MyStory.json</h2>
           </HStack>
         </GridItem>
-        <GridItem rowStart={2} colStart={1} className="bodySectionBody">
+        <GridItem
+          rowStart={2}
+          colStart={1}
+          className="bodySectionBody hidden hiddenLeft hiddenDelayed"
+        >
           <HStack alignItems={"flex-start"} flexDirection={"row-reverse"}>
             <div ref={divRef}>
               <JSONCode jsonText={story}></JSONCode>

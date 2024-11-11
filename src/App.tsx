@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import { useEffect } from "react";
 
 function App() {
+  // For scroll animations
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

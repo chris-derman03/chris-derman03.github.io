@@ -1,6 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import { ImLinkedin } from "react-icons/im";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin, FaFileAlt } from "react-icons/fa";
 
 const Links = () => {
   return (
@@ -10,7 +9,7 @@ const Links = () => {
         target="_blank"
         className="footerLink"
       >
-        <ImLinkedin size={50} />
+        <FaLinkedin size={55} />
       </a>
       <a
         href={"https://github.com/chris-derman03"}
@@ -18,6 +17,9 @@ const Links = () => {
         className="footerLink"
       >
         <FaGithubSquare size={55} />
+      </a>
+      <a href={"/documents/Resume.pdf"} target="_blank" className="footerLink">
+        <FaFileAlt size={50} />
       </a>
     </Flex>
   );

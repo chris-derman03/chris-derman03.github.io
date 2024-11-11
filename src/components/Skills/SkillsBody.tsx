@@ -11,7 +11,12 @@ interface Props {
 
 const SkillsBody = ({ skillset }: Props) => {
   return (
-    <Flex flexDir={"column"} gap={24} margin={10}>
+    <Flex
+      flexDir={"column"}
+      gap={24}
+      margin={10}
+      className="hidden hiddenRight hiddenDelayed"
+    >
       {Object.entries(skillset).map(([category, skills]) => (
         <Flex key={category} flexDir={"column"} gap={6}>
           <h3>{category}</h3>
