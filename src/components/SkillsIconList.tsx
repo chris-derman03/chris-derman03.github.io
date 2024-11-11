@@ -69,7 +69,7 @@ interface Props {
 
 const SkillsIconList = ({ skills, size = 7 }: Props) => {
   return (
-    <Flex gap={4} wrap="wrap">
+    <Flex gap={4} wrap="wrap" justify={"center"}>
       {skills.map((skill, index) => (
         <Tooltip
           label={skill}

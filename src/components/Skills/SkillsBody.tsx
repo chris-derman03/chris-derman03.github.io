@@ -18,7 +18,7 @@ const SkillsBody = ({ skillset }: Props) => {
       className="hidden hiddenRight hiddenDelayed"
     >
       {Object.entries(skillset).map(([category, skills]) => (
-        <Flex key={category} flexDir={"column"} gap={6}>
+        <Flex key={category} flexDir={"column"} gap={6} alignItems={"center"}>
           <h3>{category}</h3>
           <SkillsIconList skills={skills} size={50} />
         </Flex>

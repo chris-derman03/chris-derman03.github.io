@@ -13,9 +13,16 @@
     --experience-year-width: 40px;
     --experience-description-width: 200px;
     --header-flex-direction: column;
-    --pyAbout-width: 80%;
-    --nav-width: 0;
-    --nav-display: none;
+    --pyAbout-width: 75%;
+    --nav-width: 100vw;
+    --nav-height: auto;
+    --nav-offset: 0px;
+    --nav-justify: center;
+    --nav-flex-direction: row;
+    --body-section-width: 80%;
+    --body-section-margin: 0px;
+    --header-top-margin: 125px;
+    --experience-alignment: center;
 
     --theme-color-a: rgba(20, 7, 32, 0.4);
     --theme-color-b: rgb(49, 31, 65, 0.8);
@@ -24,6 +31,13 @@
     --theme-color-2: rgb(199, 113, 134);
     --theme-color-3: rgb(255, 251, 81);
 }
+
+@media (min-width: 575px) {
+    :root {
+        --pyAbout-width: inherit;
+    }
+}
+
   
 @media (min-width: 768px) {
     :root {
@@ -32,13 +46,24 @@
         --experience-margin: 50px;
         --experience-year-width: 60px;
         --experience-description-width: auto;
-        --pyAbout-width: inherit;
-        --nav-width: 250px;
-        --nav-display: block;
+        --body-section-width: 60%;
+        --body-section-margin: 20%;
+        --header-top-margin: 200px;
     }
 }
 
 @media (min-width: 1240px) {
+    :root {
+        --nav-offset: 175px;
+        --nav-width: 175px;
+        --nav-height: 100vh;
+        --nav-justify: start;
+        --nav-flex-direction: column;
+        --experience-alignment: start;
+    }
+}
+
+@media (min-width: 1400px) {
     :root {
         --header-flex-direction: row;
     }
@@ -176,20 +201,21 @@ h6 {
     top: 0;
     left: 0;
     width: var(--nav-width);
-    height: 100vh;
+    height: var(--nav-height);
     background-color: var(--theme-color-a);
     box-shadow: 0 0 10px var(--theme-color-1);
     backdrop-filter: blur(8px);
-    /* align-items: center; */
+    z-index: 1;
 }
 
 .navSection {
     width: 100%;
     box-shadow: 0 0 10px var(--theme-color-1);
+    justify-content: var(--nav-justify);
+    flex-direction: var(--nav-flex-direction);
 }
 
 .navButton {
-    display: var(--nav-display);
     background-color: var(--theme-color-a);
     border-radius: 4px;
     padding: 4px;
@@ -205,10 +231,12 @@ h6 {
 /* BODY */
 
 .content {
-    margin-left: var(--nav-width);
+    margin-left: var(--nav-offset);
     overflow-y: scroll;
     height: 100vh;
     flex-grow: 1;
+    overflow-x: hidden;
+    align-items: center;
 }
 
 .bodySection {
@@ -247,7 +275,7 @@ h6 {
     flex-direction: var(--header-flex-direction);
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    margin-top: var(--header-top-margin);
 }
 
 @keyframes moveHeaderImage {
@@ -343,34 +371,41 @@ h6 {
 /* EXPERIENCE */
 
 #Experience { 
-    width: 50%;
-    margin-left: 25%;
+    width: var(--body-section-width);
     margin-top: 400px;
     position: relative;
+    align-items: var(--experience-alignment);
 }
 
 .timeline {
     flex-direction: column-reverse;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: var(--experience-margin);
+    margin: var(--experience-margin);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.timelineNode {
+    min-height: 100px;
+    max-height: 100px;
 }
 
 .timelineNodeYear {
-    width: var(--experience-year-width);
+    min-width: 50px;
+    max-width: 50px;
     text-align: center;
     text-shadow: 0 0 10px var(--theme-color-1);
 }
 
-.timelineNodeImage {
-    width: 100px;
-    border-radius: 100%;
-    box-shadow: 0 0 20px white;
-}
-
 .timelineNodeLink {
+    min-width: 100px;
+    max-width: 100px;
     border-radius: 50%;
     transition: box-shadow 0.4s ease-in-out;
+}
+
+.timelineNodeImage {
+    border-radius: 100%;
+    box-shadow: 0 0 20px white;
 }
 
 .timelineNodeLink:hover {
@@ -382,7 +417,8 @@ h6 {
 
 .timelineNodeDescription {
     flex-direction: column;
-    width: var(--experience-description-width);
+    overflow: show;
+    /* width: var(--experience-description-width); */
 }
 
 .timelineDividerContainer {
@@ -408,8 +444,8 @@ h6 {
 /* Projects */
 
 #Projects { 
-    width: 60%;
-    margin-left: 10%;
+    width: var(--body-section-width);
+    margin-right: var(--body-section-margin);
     margin-top: 300px;
 }
 
@@ -434,8 +470,8 @@ h6 {
 /* Skills */
 
 #Skills { 
-    width: 60%;
-    margin-left: 30%;
+    width: var(--body-section-width);
+    margin-left: var(--body-section-margin);
     margin-top: 300px;
 }
 
@@ -443,8 +479,8 @@ h6 {
 /* STORY */
 
 #Story { 
-    width: 60%;
-    margin-left: 10%;
+    width: var(--body-section-width);
+    margin-right: var(--body-section-margin);;
     margin-top: 300px;
 }
 

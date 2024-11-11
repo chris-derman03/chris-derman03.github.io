@@ -36,7 +36,7 @@ const TreeNode = ({ divider, nodeData }: Props) => {
           src={imagePath}
           alt={nodeData?.company + " logo"}
           className="timelineNodeImage"
-        ></Image>
+        />
       </a>
       <Flex className="timelineNodeDescription">
         <h3>{nodeData?.title}</h3>

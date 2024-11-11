@@ -23,7 +23,7 @@ const handleClick = (sectionId: string): void => {
 const NavBar = () => {
   return (
     <Flex className="nav">
-      <Flex flexDir={"column"} className="navSection" gap={0}>
+      <Flex className="navSection" gap={0}>
         {scrollSections.map((section) => (
           <button
             className="navButton"
