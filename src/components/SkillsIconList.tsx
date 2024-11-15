@@ -65,11 +65,12 @@ const iconMap: { [key: string]: string } = {
 interface Props {
   skills: string[];
   size?: number;
+  justify?: string;
 }
 
-const SkillsIconList = ({ skills, size = 7 }: Props) => {
+const SkillsIconList = ({ skills, size = 7, justify }: Props) => {
   return (
-    <Flex gap={4} wrap="wrap" justify={"center"}>
+    <Flex gap={4} wrap="wrap" justify={justify}>
       {skills.map((skill, index) => (
         <Tooltip
           label={skill}

@@ -7,7 +7,7 @@
 }
 
 :root {
-    --header-image-dimension: 200px;
+    --header-image-dimension: 250px;
     --global-font-size: 10px;
     --experience-margin: 10px;
     --experience-year-width: 40px;
@@ -19,6 +19,8 @@
     --nav-offset: 0px;
     --nav-justify: center;
     --nav-flex-direction: row;
+    --nav-position: relative;
+    --content-flex-direction: column;
     --body-section-width: 80%;
     --body-section-margin: 0px;
     --header-top-margin: 125px;
@@ -59,6 +61,8 @@
         --nav-height: 100vh;
         --nav-justify: start;
         --nav-flex-direction: column;
+        --nav-position: fixed;
+        --content-flex-direction: row;
         --experience-alignment: start;
     }
 }
@@ -92,6 +96,7 @@
 
 .pageContainer {
     display: flex;
+    flex-direction: var(--content-flex-direction);
     height: 100vh;
 }
 
@@ -197,7 +202,7 @@ h6 {
 /* NavBar */
 
 .nav {
-    position: fixed;
+    position: var(--nav-position);
     top: 0;
     left: 0;
     width: var(--nav-width);
@@ -205,7 +210,6 @@ h6 {
     background-color: var(--theme-color-a);
     box-shadow: 0 0 10px var(--theme-color-1);
     backdrop-filter: blur(8px);
-    z-index: 1;
 }
 
 .navSection {
@@ -232,7 +236,7 @@ h6 {
 
 .content {
     margin-left: var(--nav-offset);
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 100vh;
     flex-grow: 1;
     overflow-x: hidden;
