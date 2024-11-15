@@ -32,7 +32,7 @@ function App() {
 
   return (
     <>
-      <video autoPlay muted loop id="bg-video">
+      <video autoPlay muted playsInline loop id="bg-video">
         <source src={background_loop} type="video/mp4" />
       </video>
       <div className="pageContainer">
