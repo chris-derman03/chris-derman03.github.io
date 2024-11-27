@@ -60,6 +60,7 @@ const iconMap: { [key: string]: string } = {
   "ARM32 Assembly": "/img/arm32.webp",
   UNIX: "/img/unix.webp",
   "Apache Airflow": "/img/airflow.webp",
+  LangChain: "/img/langchain.webp",
 };
 
 interface Props {
