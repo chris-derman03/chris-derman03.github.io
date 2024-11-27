@@ -298,7 +298,7 @@ h6 {
     justify-content: center;
     align-items: center;
     animation-name: moveHeaderImage;
-    animation-duration: 2400s;
+    animation-duration: 24000s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
