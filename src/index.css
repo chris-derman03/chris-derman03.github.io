@@ -224,7 +224,7 @@ h6 {
     border-radius: 4px;
     padding: 4px;
     border: solid black 1px;
-    text-align: left;
+    text-align: center;
     transition: transform 0.3s ease, color, 0.3s ease;
 } .navButton:hover {
     background-color: var(--theme-color-b);
