@@ -297,8 +297,8 @@ h6 {
     height: var(--header-image-dimension);
     justify-content: center;
     align-items: center;
-    animation-name: moveHeaderImage;
-    animation-duration: 24000s;
+    /* animation-name: moveHeaderImage; */
+    animation-duration: 2000s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
