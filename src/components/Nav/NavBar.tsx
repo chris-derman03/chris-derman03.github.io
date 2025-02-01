@@ -36,6 +36,11 @@ const NavBar = () => {
           </button>
         ))}
       </Flex>
+      <Flex className="navAbout">
+        <h1>Christian DerManuelian</h1>
+        <h6>Data Scientist</h6>
+        <h6>Machine Learning Engineer</h6>
+      </Flex>
     </Flex>
   );
 };

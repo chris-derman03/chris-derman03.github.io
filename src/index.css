@@ -101,6 +101,13 @@
 /* =========================================================== */
 /* Text */
 
+h1 {
+    color: white;
+    font-size: calc(var(--global-font-size) * 2);
+    font-family: fantasy;
+    text-shadow: 0 0 2px white;
+}
+
 h2 {
     color: var(--theme-color-1);
     font-size: calc(var(--global-font-size) * 1.3);
@@ -203,12 +210,12 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     position: var(--nav-position);
-    /* top: 0;
-    left: 0; */
+
     width: var(--nav-width);
-    padding: 20px;
     height: var(--nav-height);
+    /* padding: 20px; */
 
     background-color: var(--theme-color-a);
     box-shadow: 0 0 10px var(--theme-color-1);
@@ -233,6 +240,13 @@ h6 {
 } .navButton:hover {
     background-color: var(--theme-color-b);
     transform: scale(0.99);
+}
+
+.navAbout {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
 }
 
 /* =========================================================== */
