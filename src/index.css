@@ -45,7 +45,7 @@
         --header-image-dimension: 250px;
         --global-font-size: 14px;
         --experience-margin: 50px;
-        --experience-year-width: 60px;
+        --experience-year-width: 200px;
         --experience-description-width: auto;
         --body-section-width: 60%;
         --body-section-margin: 20%;
@@ -375,7 +375,7 @@ h6 {
 /* EXPERIENCE */
 
 #Experience { 
-    width: var(--body-section-width);
+    width: 80%;
     margin-top: 400px;
     position: relative;
     align-items: var(--experience-alignment);
@@ -469,7 +469,7 @@ h6 {
 .projectNode {
     flex-direction: row;
     width: calc(50% - var(--project-gap));
-    height: 350px;
+    height: 450px;
 
     overflow: hidden;
     box-shadow: white 0 0 10px;
@@ -479,13 +479,13 @@ h6 {
 
 .projectNodeImage {
     object-fit: cover;
-    width: 30%;
+    width: 35%;
     transition: transform 0.2s ease;
 }
 
 .projectNodeBody {
     padding: 10px;
-    width: 70%;
+    width: 65%;
 
     background-color: var(--theme-color-b);
     transition: transform 0.2s ease;
@@ -516,7 +516,6 @@ h6 {
 
 #Skills { 
     width: var(--body-section-width);
-    margin-left: var(--body-section-margin);
     margin-top: 300px;
 }
 
@@ -525,7 +524,6 @@ h6 {
 
 #Story { 
     width: var(--body-section-width);
-    margin-right: var(--body-section-margin);;
     margin-top: 300px;
 }
 

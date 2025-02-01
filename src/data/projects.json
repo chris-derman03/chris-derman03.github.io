@@ -5,63 +5,72 @@
             "link": "https://game-hub-cderman.vercel.app",
             "description": "A React project for a video game discovery app. This was the end goal of Mosh Hamedani's React course Part 1 that can be found at https://codewithmosh.com/p/ultimate-react-part1",
             "skill_set": ["React.js", "Vite", "TypeScript", "JavaScript", "HTML", "CSS"],
-            "date": "October 12, 2024"
+            "date": "October 12, 2024",
+            "image": "/img/projects/gamehub.webp"
         },
         {
             "title": "Machine Learning Paper: Using Pretrained Models to Generalize Different Tasks",
             "link": "https://github.com/chris-derman03/AI_generalization/blob/main/Report.pdf",
             "description": "Class project research question/proposal. (Cog Sci 181: Neural Networks and Deep Learning) Research question aimed to methodologically cut down training time and explore potential AGI capabilities of our current Machine Learning framework.",
             "skill_set": ["Neural Networks", "Deep Learning", "Hyperparameter Tuning", "AGI", "Machine Learning"],
-            "date": "March 23, 2024"
+            "date": "March 23, 2024",
+            "image": "/img/projects/mlpaper2.webp"
         },
         {
-            "title": "Machine Learning Paper: Are LLMs Sensitive to Logic-Based Word Prediction?",
+            "title": "AI Paper: Are LLMs Sensitive to Logic-Based Word Prediction?",
             "link": "https://github.com/chris-derman03/LLM_logic/blob/main/Report.pdf",
             "description": "Class project research question/proposal. (Cog Sci 150: Large Language Models) Are LLM's (ChatGPT-2) Able to Solve Logic-Based Problems?",
             "skill_set": ["Deep Learning", "LLMs", "Prompt Engineering", "Python", "pandas", "PyTorch", "sklearn"],
-            "date": "March 21, 2024"
+            "date": "March 21, 2024",
+            "image": "/img/projects/mlpaper1.webp"
         },
         {
             "title": "Hardware Acceleration of Deep Learning Algorithms",
             "link": "https://github.com/louiecai/DSC-180B-Hardware-Acceleration/blob/main/Project%20Showcase%20Poster.pdf",
             "description": "A Data Science approach to hardware acceleration of Deep Learning Model Executions. Area of study is HAR (Human Activity Recognition) Deep Learning Models.",
             "skill_set": ["PyTorch", "AWS", "Machine Learning", "Computer Architecture", "Python", "Deep Learning"],
-            "date": "March 15, 2024"
+            "date": "March 15, 2024",
+            "image": "/img/projects/180b.webp"
         },
         {
             "title": "Frequency Sort",
             "link": "https://github.com/chris-derman03/Frequency-Sort",
             "description": "Code for a sorting algorithm I thought of. It runs in linear time, given some assumptions about the data as well as knowing the minimum and maximum beforehand. Though it was not able to outperform mergesort.",
             "skill_set": ["Python", "NumPy", "Matplotlib"],
-            "date": "November 29, 2023"
+            "date": "November 29, 2023",
+            "image": "/img/projects/freqSort.webp"
         },
         {
             "title": "Image Classifer (Convolutional Neural Network)",
             "link": "https://github.com/chris-derman03/chess_piece_classifier/blob/master/train.ipynb",
             "description": "Trained a Convolutional Neural Network to classify images of chess pieces.",
             "skill_set": ["TensorFlow", "Keras", "Convolutional Neural Networks", "Machine Learning", "Python", "NumPy", "Jupyter"],
-            "date": "November 4, 2023"
+            "date": "November 4, 2023",
+            "image": "/img/projects/chess.webp"
         },
         {
             "title": "Metal Gear Solid Alarm Clock",
             "link": "https://github.com/chris-derman03/MetalGearClock",
             "description": "DIY project for a custom alarm clock based off the timer from a game. This is the code for the software side of the project.",
             "skill_set": ["Python", "Pygame", "Event Loops", "Circuits", "Raspberry Pi", "Linux"],
-            "date": "September 7, 2023"
+            "date": "September 7, 2023",
+            "image": "/img/projects/mgsClock.webp"
         },
         {
             "title": "Powerlifting Competitions Data Analysis",
             "link": "https://github.com/chris-derman03/Powerlifting-Analysis/blob/main/Data%20Anaylsis.ipynb",
             "description": "Data Analysis Practice with python and pandas in a jupyter notebook. Create a linear model to predict outcome potential of a powerlifter based on prior competition data.",
             "skill_set": ["Python", "pandas", "NumPy", "sklearn", "Feature Engineering", "Linear Regression"],
-            "date": "March 31, 2023"
+            "date": "March 31, 2023",
+            "image": "/img/projects/lift.webp"
         },
         {
             "title": "GNB Classifier",
             "link": "https://github.com/chris-derman03/GNB",
             "description": "Using Python to create a Gaussian Naive Bayes Classifier from scratch.",
             "skill_set": ["Python", "Statistics", "Machine Learning", "pandas", "NumPy"],
-            "date": "March 29, 2023"
+            "date": "March 29, 2023",
+            "image": "/img/projects/gnb.webp"
         }
     ]
 }
