@@ -10,7 +10,7 @@ const HighlightedProjects = ({ projectsData }: Props) => {
 
   return (
     <Flex
-      className="projectList hidden hiddenLeft hiddenDelayed"
+      className="projectList hidden hiddenRight hiddenDelayed"
       gap={10}
       margin={10}
     >

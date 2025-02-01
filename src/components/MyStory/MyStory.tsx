@@ -21,7 +21,7 @@ const MyStory = ({ id }: Props) => {
   }, []);
 
   return (
-    <div className="bodySection hidden hiddenLeft" id={id}>
+    <div className="bodySection hidden hiddenRight" id={id}>
       <Grid templateColumns="90% 10%" templateRows="40px 1fr" rowGap={2}>
         <GridItem rowStart={1} colSpan={2} className="bodySectionHeader">
           <HStack
@@ -38,7 +38,7 @@ const MyStory = ({ id }: Props) => {
         <GridItem
           rowStart={2}
           colStart={1}
-          className="bodySectionBody hidden hiddenLeft hiddenDelayed"
+          className="bodySectionBody hidden hiddenRight hiddenDelayed"
         >
           <HStack alignItems={"flex-start"} flexDirection={"row-reverse"}>
             <div ref={divRef}>

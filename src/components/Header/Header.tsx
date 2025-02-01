@@ -1,7 +1,4 @@
-import { Flex } from "@chakra-ui/react";
 import PythonAbout from "./PythonAbout";
-
-import HeaderImages from "./HeaderImages";
 
 interface Props {
   id: string;
@@ -9,10 +6,9 @@ interface Props {
 
 const Header = ({ id }: Props) => {
   return (
-    <Flex className="pageHeader" gap={100} id={id}>
-      <HeaderImages />
+    <div className="pageHeader" id={id}>
       <PythonAbout />
-    </Flex>
+    </div>
   );
 };
 

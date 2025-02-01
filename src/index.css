@@ -7,7 +7,7 @@
 }
 
 :root {
-    --header-image-dimension: 250px;
+    --header-image-dimension: 200px;
     --global-font-size: 10px;
     --experience-margin: 10px;
     --experience-year-width: 40px;
@@ -43,7 +43,7 @@
   
 @media (min-width: 768px) {
     :root {
-        --header-image-dimension: 300px;
+        --header-image-dimension: 250px;
         --global-font-size: 14px;
         --experience-margin: 50px;
         --experience-year-width: 60px;
@@ -202,10 +202,14 @@ h6 {
 /* NavBar */
 
 .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: var(--nav-position);
     top: 0;
     left: 0;
-    width: var(--nav-width);
+    /* width: var(--nav-width); */
+    padding: 20px;
     height: var(--nav-height);
     background-color: var(--theme-color-a);
     box-shadow: 0 0 10px var(--theme-color-1);
@@ -215,6 +219,7 @@ h6 {
 .navSection {
     width: 100%;
     box-shadow: 0 0 10px var(--theme-color-1);
+    border-radius: 4px;
     justify-content: var(--nav-justify);
     flex-direction: var(--nav-flex-direction);
 }
@@ -275,10 +280,6 @@ h6 {
 /* HEADER */
 
 .pageHeader {
-    display: flex;
-    flex-direction: var(--header-flex-direction);
-    justify-content: center;
-    align-items: center;
     margin-top: var(--header-top-margin);
 }
 

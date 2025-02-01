@@ -1,5 +1,5 @@
 <span className="pyCode"><i>class</i></span> <span className="pyClassHeader">Me</span><span className="pySyn2">()</span><span className="pyVar">:</span>
-<span className="pyVar">    age = </span><span className="pyLiteral">21</span>
+<span className="pyVar">    age = </span><span className="pyLiteral">22</span>
 <span className="pyVar">    about = </span><span className="pySyn2">[</span><span className="pyString">"Data Scientist"</span><span className="pyVar">,</span>
              <span className="pyString">"Machine Learning Engineer"</span><span className="pyVar">,</span>
              <span className="pyString">"B.S. Data Science Degree - UCSD"</span><span className="pyVar">,</span>

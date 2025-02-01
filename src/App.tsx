@@ -39,8 +39,8 @@ function App() {
         <NavBar />
         <Flex className="content" flexDir="column">
           <Header id="About" />
-          <Experience id="Experience" />
           <Projects id="Projects" />
+          <Experience id="Experience" />
           <Skills id="Skills" />
           <MyStory id="Story" />
           <Footer />
