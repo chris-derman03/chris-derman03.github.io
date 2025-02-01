@@ -3,41 +3,46 @@
     {
         "company": "AGBU MDS",
         "title": "K-12 School",
-        "start": "2005",
+        "start": "Feb 2006 - Jun 2020",
         "range": "15 Years",
         "cover": "/img/agbu_logo.webp",
-        "link": "https://www.agbumds.org"
+        "link": "https://www.agbumds.org",
+        "category": "education"
     },
     {
         "company": "TUMO",
         "title": "Software Intern",
-        "start": "2019",
+        "start": "Jun 2019 - Jul 2019",
         "range": "2 Months",
         "cover": "/img/tumo.webp",
-        "link": "https://tumo.org"
+        "link": "https://tumo.org",
+        "category": "job"
     },
     {
         "company": "Seven Smarts LLC",
         "title": "Software Engineer Intern",
-        "start": "2019",
+        "start": "Jun 2019 - Jul 2019",
         "range": "2 Months",
         "cover": "/img/7smart.webp",
-        "link": "https://www.7smarts.com"
+        "link": "https://www.7smarts.com",
+        "category": "job"
     },
     {
         "company": "Planet Bids",
         "title": "Data Analyst Intern",
-        "start": "2019",
+        "start": "Aug 2019 - Nov 2019",
         "range": "4 Months",
         "cover": "/img/pb_logo.webp",
-        "link": "https://home.planetbids.com"
+        "link": "https://home.planetbids.com",
+        "category": "job"
     },
     {
         "company": "U.C. San Diego",
         "title": "Data Science B.S.",
-        "start": "2020",
+        "start": "Sep 2020 - Jun 2024",
         "range": "3 Years 10 Months",
         "cover": "/img/ucsd.webp",
-        "link": "https://ucsd.edu"
+        "link": "https://ucsd.edu",
+        "category": "education"
     }]
 }

@@ -9,9 +9,6 @@
 :root {
     --header-image-dimension: 200px;
     --global-font-size: 10px;
-    --experience-margin: 10px;
-    --experience-year-width: 40px;
-    --experience-description-width: 200px;
     --header-flex-direction: column;
     --pyAbout-width: 90vw;
     --nav-width: 100vw;
@@ -23,13 +20,12 @@
     --body-section-width: 80%;
     --body-section-margin: 0px;
     --header-top-margin: 125px;
-    --experience-alignment: center;
 
     --theme-color-a: rgba(20, 7, 32, 0.4);
     --theme-color-b: rgb(49, 31, 65, 0.8);
     --theme-color-c: rgb(141, 87, 177);
     --theme-color-1: rgb(101, 183, 181);
-    --theme-color-2: rgb(199, 113, 134);
+    --theme-color-2: rgb(227, 64, 64);
     --theme-color-3: rgb(255, 251, 81);
 }
 
@@ -44,9 +40,6 @@
     :root {
         --header-image-dimension: 250px;
         --global-font-size: 14px;
-        --experience-margin: 50px;
-        --experience-year-width: 200px;
-        --experience-description-width: auto;
         --body-section-width: 60%;
         --body-section-margin: 20%;
         --header-top-margin: 200px;
@@ -61,7 +54,6 @@
         --nav-flex-direction: column;
         --nav-position: fixed;
         --content-flex-direction: row;
-        --experience-alignment: start;
     }
 }
 
@@ -117,7 +109,7 @@ h2 {
 h3 {
     color: var(--theme-color-2);
     font-size: calc(var(--global-font-size)*1.8);
-    text-shadow: 0 0 2px rgb(187, 64, 64);
+    text-shadow: 0 0 10px rgb(255, 171, 171);
 }
 
 
@@ -137,6 +129,12 @@ h6 {
     color: var(--theme-color-1);
     font-size: calc(var(--global-font-size) * 1.1);
     text-shadow: 0 0 10px white;
+}
+
+.h7 {
+    color: white;
+    font-size: calc(var(--global-font-size)*1.2);
+    text-shadow: 0 0 5px white;
 }
 
 .customTooltip {
@@ -392,70 +390,84 @@ h6 {
     width: 80%;
     margin-top: 400px;
     position: relative;
-    align-items: var(--experience-alignment);
+    align-items: center;
 }
 
 .timeline {
-    flex-direction: column-reverse;
-    margin: var(--experience-margin);
-    margin-top: 30px;
+    position: relative;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
+.timelineBar {
+    position: absolute;
+    z-index: -1;
+
+    height: 100%;
+    width: 3px;
+
+    background-color: white;
+}
+
+.timelineNodes {
+    margin-top: 100px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.timelinePoint {
+    height: 50px;
+    width: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    outline: solid white;
+    border-radius: 50%;   
+}
+
 .timelineNode {
-    min-height: 100px;
-    max-height: 100px;
+    align-items: center;
+    gap: 40px;
 }
 
-.timelineNodeYear {
-    min-width: 50px;
-    max-width: 50px;
-    text-align: center;
-    text-shadow: 0 0 10px var(--theme-color-1);
-}
-
-.timelineNodeLink {
-    min-width: 100px;
-    max-width: 100px;
-    border-radius: 50%;
-    transition: box-shadow 0.4s ease-in-out;
-}
-
-.timelineNodeImage {
-    border-radius: 100%;
-    box-shadow: 0 0 20px white;
-}
-
-.timelineNodeLink:hover {
-    box-shadow: 0 0 20px rgb(189, 91, 10);
-    border-radius: 100%;
-    box-shadow: 0 0 20px rgb(189, 91, 10), 
-                0 0 25px rgb(189, 91, 10);
+.timelineNodePanel {
+    position: relative;
+    width: 400px;
 }
 
 .timelineNodeDescription {
+    border-radius: 7px;
+    background-color: var(--theme-color-b);
+    min-height: 200px;
+}
+
+/* Little arrow */
+.timelineNodeDescription::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--theme-color-b);
+}
+
+.timelineNodeText {
     flex-direction: column;
-    overflow: show;
-    /* width: var(--experience-description-width); */
+    padding: 10px;
 }
 
-.timelineDividerContainer {
-    width: 100px;
-    height: 100px;
-}
-
-.timelineDivider {
-    width: 1px;
-    margin: 0 auto;
-    height: inherit;
-    background-color: white;
-    box-shadow: 0 0 90px rgb(189, 91, 10),
-                0 0 80px rgb(189, 91, 10),
-                0 0 70px rgb(189, 91, 10),
-                0 0 60px rgb(189, 91, 10),
-                0 0 50px rgb(189, 91, 10),
-                0 0 40px rgb(189, 91, 10),
-                0 0 30px rgb(189, 91, 10);    
+.timelineNodeImage {
+    position: absolute;
+    object-fit: cover;
+    opacity: 0.2;
 }
 
 /* =========================================================== */

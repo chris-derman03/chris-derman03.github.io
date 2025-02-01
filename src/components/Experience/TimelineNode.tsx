@@ -1,49 +1,39 @@
-import { Box, Flex, HStack, Image } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
+import TimelinePoint from "./TimelinePoint";
 
-export interface TimelinePoint {
+export interface TimelinePointData {
   company: string;
   title: string;
   start: string;
   range: string;
   cover: string;
   link: string;
+  category: string;
 }
 
 interface Props {
-  divider?: boolean;
-  nodeData?: TimelinePoint;
+  nodeData?: TimelinePointData;
 }
 
-const TreeNode = ({ divider, nodeData }: Props) => {
-  if (divider) {
-    return (
-      <HStack className="timelineNode" gap={5}>
-        <h5 className="timelineNodeYear"></h5>
-        <Box className="timelineDividerContainer">
-          <Box className="timelineDivider" />
-        </Box>
-      </HStack>
-    );
-  }
-
+const TimelineNode = ({ nodeData }: Props) => {
   const imagePath = nodeData?.cover;
 
   return (
-    <HStack className="timelineNode" gap={5}>
-      <h5 className="timelineNodeYear">{nodeData?.start}</h5>
-      <a href={nodeData?.link} target="_blank" className="timelineNodeLink">
-        <Image
-          src={imagePath}
-          alt={nodeData?.company + " logo"}
-          className="timelineNodeImage"
-        />
-      </a>
-      <Flex className="timelineNodeDescription">
-        <h3>{nodeData?.title}</h3>
-        <h4>{nodeData?.company + " (" + nodeData?.range + ")"}</h4>
+    <Flex className="timelineNode">
+      <Flex className="timelineNodePanel timelineNodeDescription">
+        <Flex className="timelineNodeText">
+          <h5>{nodeData?.title}</h5>
+          <p className="h7">{nodeData?.company}</p>
+          <h4>{nodeData?.range}</h4>
+        </Flex>
+        <Image src={imagePath} className="timelineNodeImage" boxSize="100%" />
       </Flex>
-    </HStack>
+      <TimelinePoint category={nodeData?.category} />
+      <Flex className="timelineNodePanel">
+        <p className="h7">{nodeData?.start}</p>
+      </Flex>
+    </Flex>
   );
 };
 
-export default TreeNode;
+export default TimelineNode;

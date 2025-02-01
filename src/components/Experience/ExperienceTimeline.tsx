@@ -1,8 +1,9 @@
 import { Flex } from "@chakra-ui/react";
-import TreeNode, { TimelinePoint } from "./TimelineNode";
+import TimelineNode, { TimelinePointData } from "./TimelineNode";
+import TimelinePoint from "./TimelinePoint";
 
 interface Props {
-  timelineData: { timeline: TimelinePoint[] };
+  timelineData: { timeline: TimelinePointData[] };
 }
 
 const ExperienceTree = ({ timelineData }: Props) => {
@@ -10,12 +11,13 @@ const ExperienceTree = ({ timelineData }: Props) => {
 
   return (
     <Flex className="timeline">
-      {timeline.map((timelinePoint, index) => (
-        <div key={"nodeAndPath_" + index}>
-          {index !== timeline.length - 1 && <TreeNode divider={true} />}
-          <TreeNode nodeData={timelinePoint} />
-        </div>
-      ))}
+      <div className="timelineBar" />
+      <Flex className="timelineNodes">
+        <TimelinePoint category="start" />
+        {timeline.map((point) => (
+          <TimelineNode nodeData={point} />
+        ))}
+      </Flex>
     </Flex>
   );
 };
