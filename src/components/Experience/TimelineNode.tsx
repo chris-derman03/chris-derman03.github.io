@@ -13,14 +13,21 @@ export interface TimelinePointData {
 
 interface Props {
   nodeData?: TimelinePointData;
+  idx: number;
 }
 
-const TimelineNode = ({ nodeData }: Props) => {
+const TimelineNode = ({ nodeData, idx }: Props) => {
   const imagePath = nodeData?.cover;
 
   return (
-    <Flex className="timelineNode">
-      <Flex className="timelineNodePanel timelineNodeDescription">
+    <Flex
+      className={`timelineNode ${idx % 2 === 0 ? "" : "timelineNodeReversed"}`}
+    >
+      <Flex
+        className={`timelineNodePanel timelineNodeDescription ${
+          idx % 2 === 0 ? "" : "timelineNodeDescriptionReversed"
+        }`}
+      >
         <Flex className="timelineNodeText">
           <h5>{nodeData?.title}</h5>
           <p className="h7">{nodeData?.company}</p>
@@ -29,7 +36,11 @@ const TimelineNode = ({ nodeData }: Props) => {
         <Image src={imagePath} className="timelineNodeImage" boxSize="100%" />
       </Flex>
       <TimelinePoint category={nodeData?.category} />
-      <Flex className="timelineNodePanel">
+      <Flex
+        className={`timelineNodePanel ${
+          idx % 2 === 0 ? "" : "timelineNodeDateReversed"
+        }`}
+      >
         <p className="h7">{nodeData?.start}</p>
       </Flex>
     </Flex>

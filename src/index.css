@@ -414,7 +414,7 @@ h6 {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    gap: 150px;
+    gap: 100px;
 }
 
 .timelinePoint {
@@ -434,9 +434,17 @@ h6 {
     gap: 40px;
 }
 
+.timelineNodeReversed {
+    flex-direction: row-reverse;
+}
+
 .timelineNodePanel {
     position: relative;
     width: 400px;
+}
+
+.timelineNodeDateReversed {
+    justify-content: end;
 }
 
 .timelineNodeDescription {
@@ -457,6 +465,13 @@ h6 {
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid var(--theme-color-b);
+}
+
+.timelineNodeDescriptionReversed::after {
+    right: 0;
+    left: -10px;
+    border-left: 0;
+    border-right: 10px solid var(--theme-color-b);
 }
 
 .timelineNodeText {

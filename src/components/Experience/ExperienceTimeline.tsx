@@ -13,9 +13,16 @@ const ExperienceTree = ({ timelineData }: Props) => {
     <Flex className="timeline">
       <div className="timelineBar" />
       <Flex className="timelineNodes">
-        <TimelinePoint category="start" />
-        {timeline.map((point) => (
-          <TimelineNode nodeData={point} />
+        <Flex className="timelineNode">
+          <Flex className="timelineNodePanel timelineNodeDateReversed">
+            <p className="h7">Jan 24, 2003</p>
+          </Flex>
+          <TimelinePoint category="start" />
+          <Flex className="timelineNodePanel"></Flex>
+        </Flex>
+
+        {timeline.map((point, index) => (
+          <TimelineNode nodeData={point} idx={index} />
         ))}
       </Flex>
     </Flex>
