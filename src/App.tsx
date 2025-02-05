@@ -37,7 +37,7 @@ function App() {
       </video>
       <div className="pageContainer">
         <NavBar />
-        <Flex className="content" flexDir="column">
+        <Flex className="content">
           <Header id="BodySection_About" />
           <Projects id="BodySection_Code" />
           <Experience id="BodySection_Career" />

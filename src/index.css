@@ -8,10 +8,6 @@
 
 :root {
     --global-font-size: 10px;
-    --content-flex-direction: column;
-    --body-section-width: 80%;
-    --body-section-margin: 0px;
-
     --theme-color-a: rgba(20, 7, 32, 0.4);
     --theme-color-b: rgb(49, 31, 65, 0.8);
     --theme-color-c: rgb(141, 87, 177);
@@ -23,14 +19,6 @@
 @media (min-width: 768px) {
     :root {
         --global-font-size: 14px;
-        --body-section-width: 60%;
-        --body-section-margin: 20%;
-    }
-}
-
-@media (min-width: 1240px) {
-    :root {
-        --content-flex-direction: row;
     }
 }
 
@@ -294,6 +282,23 @@ h6 {
 /* =========================================================== */
 /* BODY */
 
+:root {
+    --page-container-flex-direction: column;
+    --body-section-width: 80%;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --body-section-width: 60%;
+    }
+}
+
+@media (min-width: 1240px) {
+    :root {
+        --page-container-flex-direction: row;
+    }
+}
+
 #bg-video {
     position: fixed;
     top: 0;
@@ -306,11 +311,12 @@ h6 {
 
 .pageContainer {
     display: flex;
-    flex-direction: var(--content-flex-direction);
+    flex-direction: var(--page-container-flex-direction);
     height: 100vh;
 }
 
 .content {
+    flex-direction: column;
     overflow-y: auto;
     height: 100vh;
     flex-grow: 1;
