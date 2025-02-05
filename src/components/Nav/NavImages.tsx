@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Flex, Image } from "@chakra-ui/react";
 
-const HeaderImages = () => {
+const NavImages = () => {
   const images = ["/img/header/geisel.png", "/img/header/dublin.png"];
   const [currentImageIdx, setCurrentImageIdx] = useState(0);
   const [isFading, setIsFading] = useState(false);
@@ -20,11 +20,11 @@ const HeaderImages = () => {
   }, [images.length]);
 
   return (
-    <Flex className="headerImagesContainer">
+    <Flex className="navImagesContainer">
       {images.map((image, index) => (
         <Image
           key={index}
-          className="headerImage"
+          className="navImage"
           alt={`Image ${index + 1}`}
           src={image}
           style={{
@@ -43,4 +43,4 @@ const HeaderImages = () => {
   );
 };
 
-export default HeaderImages;
+export default NavImages;

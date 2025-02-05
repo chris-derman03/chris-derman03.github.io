@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import HeaderImages from "../Header/HeaderImages";
+import NavImages from "./NavImages";
 const scrollSections = ["About", "Projects", "Experience", "Skills", "Story"];
 
 const scrollEmojis: { [key: string]: string } = {
@@ -24,7 +24,7 @@ const handleClick = (sectionId: string): void => {
 const NavBar = () => {
   return (
     <Flex className="nav" gap={10}>
-      <HeaderImages />
+      <NavImages />
       <Flex className="navSection" gap={0}>
         {scrollSections.map((section) => (
           <button
