@@ -57,7 +57,7 @@
             "image": "/img/projects/mgsClock.webp"
         },
         {
-            "title": "Powerlifting Competitions Data Analysis",
+            "title": "Data Analysis: Powerlifting Competitions",
             "link": "https://github.com/chris-derman03/Powerlifting-Analysis/blob/main/Data%20Anaylsis.ipynb",
             "description": "Data Analysis Practice with python and pandas in a jupyter notebook. Create a linear model to predict outcome potential of a powerlifter based on prior competition data.",
             "skill_set": ["Python", "pandas", "NumPy", "sklearn", "Feature Engineering", "Linear Regression"],
