@@ -25,10 +25,16 @@ const TimelineNode = ({ nodeData, idx }: Props) => {
     >
       <Flex
         className={`timelineNodePanel timelineNodeDescription ${
-          idx % 2 === 0 ? "" : "timelineNodeDescriptionReversed"
+          idx % 2 === 0
+            ? ""
+            : "timelineNodeDescriptionReversed timelineNodePanelReversed"
         }`}
       >
-        <Flex className="timelineNodeText">
+        <Flex
+          className={`timelineNodeText ${
+            idx % 2 === 0 ? "" : "timelineNodeTextReversed"
+          }`}
+        >
           <h5>{nodeData?.title}</h5>
           <p className="h7">{nodeData?.company}</p>
           <h4>{nodeData?.range}</h4>
@@ -37,11 +43,11 @@ const TimelineNode = ({ nodeData, idx }: Props) => {
       </Flex>
       <TimelinePoint category={nodeData?.category} />
       <Flex
-        className={`timelineNodePanel ${
+        className={`timelineNodePanel timelineNodeDate ${
           idx % 2 === 0 ? "" : "timelineNodeDateReversed"
         }`}
       >
-        <p className="h7">{nodeData?.start}</p>
+        <h6 className="h8">{nodeData?.start}</h6>
       </Flex>
     </Flex>
   );

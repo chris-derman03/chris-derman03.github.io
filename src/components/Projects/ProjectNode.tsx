@@ -1,14 +1,4 @@
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  Flex,
-  Heading,
-  HStack,
-  Image,
-  Stack,
-} from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
 import SkillsIconList from "../SkillsIconList";
 
 export interface Project {
@@ -46,18 +36,6 @@ const ProjectNode = ({ project, idx }: Props) => {
         </Flex>
       </a>
     </Flex>
-
-    // <Flex className="projectNode" gap={2}>
-    //   <h3 className="projectLink">
-    //     <a className="textLink" href={project.link} target="_blank">
-    //       {project.title}
-    //     </a>
-    //   </h3>
-
-    //
-    //
-    //
-    // </Flex>
   );
 };
 

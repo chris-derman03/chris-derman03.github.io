@@ -317,14 +317,12 @@ h6 {
 
 .content {
     flex-direction: column;
-    overflow-y: auto;
-    height: 100vh;
-    flex-grow: 1;
-    overflow-x: hidden;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .bodySection {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
 
@@ -351,6 +349,9 @@ h6 {
     font-size: calc(var(--global-font-size));
     overflow: clip;
     padding-bottom: 4px;
+}
+
+.bodySectionContent {
 }
 
 /* =========================================================== */
@@ -510,14 +511,13 @@ h6 {
 #BodySection_Career { 
     width: 80%;
     margin-top: 400px;
-    position: relative;
     align-items: center;
 }
 
 .timeline {
     position: relative;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 30px;   
 }
 
 .timelineBar {
@@ -562,10 +562,21 @@ h6 {
 .timelineNodePanel {
     position: relative;
     width: 400px;
+    justify-content: flex-end;
+}
+
+.timelineNodePanelReversed {
+    justify-content: flex-start;
+}
+
+.timelineNodeDate {
+    justify-content: start;
+    
 }
 
 .timelineNodeDateReversed {
     justify-content: end;
+    
 }
 
 .timelineNodeDescription {
@@ -598,6 +609,12 @@ h6 {
 .timelineNodeText {
     flex-direction: column;
     padding: 10px;
+
+    align-items: flex-end;
+}
+
+.timelineNodeTextReversed {
+    align-items: flex-start;
 }
 
 .timelineNodeImage {

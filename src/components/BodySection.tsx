@@ -1,5 +1,3 @@
-import { Flex } from "@chakra-ui/react";
-
 interface Props {
   id: string;
   headerText: string;
@@ -17,12 +15,12 @@ const BodySection = ({
   hiddenDirection,
 }: Props) => {
   return (
-    <Flex className={"bodySection hidden " + hiddenDirection} id={id}>
+    <div className={"bodySection hidden " + hiddenDirection} id={id}>
       <div className="bodySectionHeader">
         <h2 className="bodySectionHeaderTitle">{headerText}</h2>
       </div>
-      {sectionContent}
-    </Flex>
+      <div className="bodySectionContent">{sectionContent}</div>
+    </div>
   );
 };
 
