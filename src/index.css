@@ -435,29 +435,35 @@ h6 {
 /* =========================================================== */
 /* Projects */
 
+:root {
+    --project-node-width: 90%;
+    --project-margin: 50px;
+}
+
+@media (min-width: 1240px) {
+    :root {
+        --project-node-width: 45%; 
+    }
+}
+
 #BodySection_Code { 
     width: 80%;
     margin-top: 300px;
 }
 
-:root {
-    --project-gap: 40px;
-    --project-margin: 50px;
-}
-
-.projectList {
+.projectFlex {
+    justify-content: space-around;
     flex-wrap: wrap;
-    margin-left: var(--project-gap);
-    column-gap: var(--project-gap);
     row-gap: 80px;
+    
     margin-top: var(--project-margin);
     margin-bottom: var(--project-margin);
 }
 
 .projectNode {
     flex-direction: row;
-    width: calc(50% - var(--project-gap));
-    height: 450px;
+    width: var(--project-node-width);
+    height: auto;
 
     overflow: hidden;
     box-shadow: white 0 0 10px;
@@ -467,13 +473,13 @@ h6 {
 
 .projectNodeImage {
     object-fit: cover;
-    width: 35%;
+    width: 40%;
     transition: transform 0.2s ease;
 }
 
 .projectNodeBody {
     padding: 10px;
-    width: 65%;
+    width: 60%;
 
     background-color: var(--theme-color-b);
     transition: transform 0.2s ease;

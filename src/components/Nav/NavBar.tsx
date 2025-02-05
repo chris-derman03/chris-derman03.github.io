@@ -15,6 +15,8 @@ const handleClick = (sectionId: string): void => {
   const body = document.getElementsByClassName("content")[0];
   const section = document.getElementById("BodySection_" + sectionId);
   const content = document.getElementsByClassName("content")[0];
+  const hiddableDivHeight =
+    document.getElementsByClassName("topContent")[0]?.clientHeight + 20;
   const isScrolled = content.scrollTop > 300;
   const isMobile = window.innerWidth < 1240;
 
@@ -23,7 +25,7 @@ const handleClick = (sectionId: string): void => {
       top:
         (section.offsetTop -
           120 -
-          200 * Number(!isScrolled) * Number(isMobile)) *
+          Number(hiddableDivHeight) * Number(!isScrolled) * Number(isMobile)) *
         Number(sectionId !== "About"),
       behavior: "smooth",
     });
