@@ -10,17 +10,6 @@ import Footer from "./components/Footer/Footer";
 import { useEffect } from "react";
 
 function App() {
-  // // Start all body section horizontal scrolls in the center
-  // useEffect(() => {
-  //   const bodySectionContents =
-  //     document.getElementsByClassName("bodySectionContent");
-
-  //   for (let i = 0; i < bodySectionContents.length; i++) {
-  //     let content = bodySectionContents[i] as HTMLElement;
-  //     content.scrollLeft = (content.scrollWidth - content.clientWidth) / 2;
-  //   }
-  // }, []);
-
   // Start all body section horizontal scrolls in the center
   useEffect(() => {
     function updateScroll() {
@@ -33,7 +22,6 @@ function App() {
         if (child.clientWidth <= parent.clientWidth) {
           // Child fits inside parent, use flexbox centering
           parent.scrollLeft = 0;
-          console.log("POPPPOPOOOO");
           parent.style.justifyContent = "center";
         } else {
           // Child overflows, center it via scroll position
@@ -43,6 +31,7 @@ function App() {
       }
     }
 
+    updateScroll();
     // Run on page load and whenever the window resizes
     window.addEventListener("load", updateScroll);
     window.addEventListener("resize", updateScroll);

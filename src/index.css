@@ -345,13 +345,18 @@ h6 {
     }
 }
 
+.bodySectionContent {
+    display: flex;
+    justify-content: start;
+
+    width: 100%;
+    overflow-x: auto; 
+}
+
 .bodySectionBody {
     font-size: calc(var(--global-font-size));
     overflow: clip;
     padding-bottom: 4px;
-}
-
-.bodySectionContent {
 }
 
 /* =========================================================== */
@@ -507,14 +512,6 @@ h6 {
 
 /* =========================================================== */
 /* EXPERIENCE */
-
-.bodySectionContent {
-    display: flex;
-    justify-content: start;
-
-    width: 100%;
-    overflow-x: auto; 
-}
 
 #BodySection_Career { 
     width: 80%;
