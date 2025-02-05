@@ -69,7 +69,7 @@ const NavBar = () => {
     <Flex className="nav">
       <NavImages className="topContent navHiddable" />
       <Flex className="navAbout topContent navHiddable">
-        <h1>Christian DerManuelian</h1>
+        <h1>CHRISTIAN DERMANUELIAN</h1>
         <h6>Data Scientist</h6>
         <h6>Machine Learning Engineer</h6>
       </Flex>
