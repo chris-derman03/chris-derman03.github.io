@@ -359,7 +359,7 @@ h6 {
 
 @media (min-width: 1240px) {
     :root {
-        --header-top-margin: 200px;
+        --header-top-margin: 25vh;
         --pyAbout-width: calc(0.7*(100vw - var(--nav-width))); 
     }
 }

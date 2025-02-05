@@ -14,9 +14,17 @@ const scrollEmojis: { [key: string]: string } = {
 const handleClick = (sectionId: string): void => {
   const body = document.getElementsByClassName("content")[0];
   const section = document.getElementById("BodySection_" + sectionId);
+  const content = document.getElementsByClassName("content")[0];
+  const isScrolled = content.scrollTop > 300;
+  const isMobile = window.innerWidth < 1240;
+
   if (section) {
     body.scrollTo({
-      top: (section.offsetTop - 100) * Number(sectionId !== "About"),
+      top:
+        (section.offsetTop -
+          120 -
+          200 * Number(!isScrolled) * Number(isMobile)) *
+        Number(sectionId !== "About"),
       behavior: "smooth",
     });
   }
@@ -29,7 +37,7 @@ const NavBar = () => {
 
     const handleScroll = () => {
       const topContents = document.getElementsByClassName("topContent");
-      const isScrolled = content.scrollTop > 200;
+      const isScrolled = content.scrollTop > 300;
       const isMobile = window.innerWidth < 1240;
 
       for (let i = 0; i < topContents.length; i++) {
