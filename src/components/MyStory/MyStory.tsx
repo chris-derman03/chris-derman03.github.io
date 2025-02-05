@@ -38,7 +38,7 @@ const MyStory = ({ id }: Props) => {
         <GridItem
           rowStart={2}
           colStart={1}
-          className="bodySectionBody hidden hiddenRight hiddenDelayed"
+          className="bodySectionBodyStory hidden hiddenRight hiddenDelayed"
         >
           <HStack alignItems={"flex-start"} flexDirection={"row-reverse"}>
             <div ref={divRef}>

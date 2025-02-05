@@ -322,14 +322,12 @@ h6 {
 }
 
 .bodySection {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
     border-radius: 10px;
     background-color: var(--theme-color-a);
     box-shadow: 0 0 10px var(--theme-color-1);
     backdrop-filter: blur(8px);
+
+    outline: solid white;
 }
 
 .bodySectionHeader {
@@ -337,21 +335,23 @@ h6 {
     box-shadow: 0 0 10px var(--theme-color-1);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    width: 100%;
     text-align: center;
 
     .bodySectionHeaderTitle {
         font-size: calc(var(--global-font-size) * 2);
     }
 }
+/* 
+.bodySectionContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 
-.bodySectionBody {
+.bodySectionBodyStory {
     font-size: calc(var(--global-font-size));
     overflow: clip;
     padding-bottom: 4px;
-}
-
-.bodySectionContent {
 }
 
 /* =========================================================== */
@@ -511,13 +511,16 @@ h6 {
 #BodySection_Career { 
     width: 80%;
     margin-top: 400px;
-    align-items: center;
 }
 
 .timeline {
+    width: 100%;
     position: relative;
     justify-content: center;
     margin-bottom: 30px;   
+
+    flex-shrink: 1;
+    outline: solid red;
 }
 
 .timelineBar {
