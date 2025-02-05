@@ -159,15 +159,25 @@ h6 {
     --nav-animation-end-height: 0;
 
     --nav-width: 100vw;
+    --nav-height: auto;
     --nav-flex-direction: row;
     --nav-flex-wrap: wrap;
     --nav-justify: space-evenly;
     --nav-mobile-spacing: 20px;
     --nav-box-shadow: none;
-    --nav-images-width: 22vw;
+    --nav-images-width: 80px;
+    --nav-button-height: 45px;
     --nav-section-flex-direction: row;
     --nav-button-flex-direction: column;
     --nav-button-text-gap: 0;
+}
+
+/* Tablet Settings */
+@media (min-width: 600px) {
+    :root {
+        --nav-images-width: 150px;
+        --nav-button-height: 70px;
+    }
 }
 
 /* Desktop Settings */
@@ -183,12 +193,14 @@ h6 {
         --nav-animation-end-height: 100%;
 
         --nav-width: 19vw;
+        --nav-height: 100vh;
         --nav-flex-direction: column;
         --nav-flex-wrap: none;
         --nav-justify: space-around;
         --nav-mobile-spacing: 0;
         --nav-box-shadow: 0 0 10px var(--theme-color-1);
         --nav-images-width: 80%;
+        --nav-button-height: auto;
         --nav-section-flex-direction: column;
         --nav-button-flex-direction: row;
         --nav-button-text-gap: 10px;
@@ -207,6 +219,8 @@ h6 {
 }
 
 .nav {
+    position: fixed;
+    height: var(--nav-height);
     width: var(--nav-width);
     z-index: 1;
 
@@ -247,6 +261,7 @@ h6 {
 
 .navSection {
     width: 100%;
+    height: var(--nav-button-height);
     margin-top: var(--nav-mobile-spacing);
 
     flex-direction: var(--nav-section-flex-direction);
@@ -286,6 +301,8 @@ h6 {
 :root {
     --page-container-flex-direction: column;
     --body-section-width: 80%;
+    --content-padding-top: calc(var(--nav-images-width) + var(--nav-button-height) + 30px);
+    --content-padding-left: 0;
 }
 
 @media (min-width: 768px) {
@@ -297,6 +314,8 @@ h6 {
 @media (min-width: 1240px) {
     :root {
         --page-container-flex-direction: row;
+        --content-padding-top: 0;
+        --content-padding-left: var(--nav-width);
     }
 }
 
@@ -320,6 +339,10 @@ h6 {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+
+
+    padding-top: var(--content-padding-top);
+    margin-left: var(--content-padding-left);
 }
 
 .bodySection {
