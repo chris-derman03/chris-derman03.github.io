@@ -5,7 +5,7 @@ interface Props {
   projectsData: { projects: Project[] };
 }
 
-const HighlightedProjects = ({ projectsData }: Props) => {
+const ProjectsFlex = ({ projectsData }: Props) => {
   const projects = projectsData.projects;
 
   return (
@@ -17,4 +17,4 @@ const HighlightedProjects = ({ projectsData }: Props) => {
   );
 };
 
-export default HighlightedProjects;
+export default ProjectsFlex;

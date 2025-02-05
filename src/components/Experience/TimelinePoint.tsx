@@ -7,7 +7,7 @@ interface Props {
 const TimelinePoint = ({ category }: Props) => {
   let color;
   category == "start"
-    ? (color = "rgb(0, 255, 0)")
+    ? (color = "rgb(104, 255, 104)")
     : category == "education"
     ? (color = "rgb(0,100,255)")
     : category == "job"

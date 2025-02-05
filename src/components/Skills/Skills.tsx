@@ -11,7 +11,7 @@ export const Skills = ({ id }: Props) => {
     <BodySection
       id={id}
       headerText="⚙️ Skills 🛠️"
-      children={<SkillsBody skillset={skillset} />}
+      sectionContent={<SkillsBody skillset={skillset} />}
       hiddenDirection="hiddenRight"
     />
   );

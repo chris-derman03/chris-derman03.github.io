@@ -1,4 +1,4 @@
-import HighlightedProjects from "./HighlightedProjects";
+import ProjectsFlex from "./ProjectsFlex";
 import ProjectData from "../../data/projects.json";
 import BodySection from "../BodySection";
 
@@ -11,7 +11,7 @@ const Projects = ({ id }: Props) => {
     <BodySection
       id={id}
       headerText="💾 Projects 🖥️"
-      children={<HighlightedProjects projectsData={ProjectData} />}
+      sectionContent={<ProjectsFlex projectsData={ProjectData} />}
       hiddenDirection="hiddenRight"
     />
   );

@@ -38,11 +38,11 @@ function App() {
       <div className="pageContainer">
         <NavBar />
         <Flex className="content" flexDir="column">
-          <Header id="About" />
-          <Projects id="Projects" />
-          <Experience id="Experience" />
-          <Skills id="Skills" />
-          <MyStory id="Story" />
+          <Header id="BodySection_About" />
+          <Projects id="BodySection_Code" />
+          <Experience id="BodySection_Career" />
+          <Skills id="BodySection_Skills" />
+          <MyStory id="BodySection_Story" />
           <Footer />
         </Flex>
       </div>
