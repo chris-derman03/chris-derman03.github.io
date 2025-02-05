@@ -3,12 +3,7 @@ import Links from "./Links";
 
 const Footer = () => {
   return (
-    <Flex
-      className="footer"
-      width={"100%"}
-      justifyContent={"space-around"}
-      alignItems={"center"}
-    >
+    <Flex className="footer">
       <Links />
       <h2 style={{ color: "white" }}>©2024 Christian DerManuelian</h2>
     </Flex>

@@ -697,12 +697,16 @@ h6 {
 /* Footer */
 
 .footer {
-    background-color: var(--theme-color-b);
-    flex-direction: column;
-    height: 150px;
-    backdrop-filter: blur(4px);
+    width: 100%;
+    min-height: 150px;
     margin-top: 150px;
-    flex-shrink: 0;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: var(--theme-color-b);
+    backdrop-filter: blur(4px);
     box-shadow: 0 0 10px white;
 }
 
