@@ -7,14 +7,10 @@
 }
 
 :root {
-    --header-image-dimension: 200px;
     --global-font-size: 10px;
-    --header-flex-direction: column;
-    --pyAbout-width: 90vw;
     --content-flex-direction: column;
     --body-section-width: 80%;
     --body-section-margin: 0px;
-    --header-top-margin: 50px;
 
     --theme-color-a: rgba(20, 7, 32, 0.4);
     --theme-color-b: rgb(49, 31, 65, 0.8);
@@ -23,16 +19,9 @@
     --theme-color-2: rgb(227, 64, 64);
     --theme-color-3: rgb(255, 251, 81);
 }
-
-@media (min-width: 575px) {
-    :root {
-        --pyAbout-width: inherit;
-    }
-}
   
 @media (min-width: 768px) {
     :root {
-        --header-image-dimension: 250px;
         --global-font-size: 14px;
         --body-section-width: 60%;
         --body-section-margin: 20%;
@@ -42,7 +31,6 @@
 @media (min-width: 1240px) {
     :root {
         --content-flex-direction: row;
-        --header-top-margin: 200px;
     }
 }
 
@@ -361,6 +349,20 @@ h6 {
 
 /* =========================================================== */
 /* HEADER */
+
+
+:root {
+    --header-top-margin: 50px;
+    --pyAbout-width: 90vw;  
+}
+
+
+@media (min-width: 1240px) {
+    :root {
+        --header-top-margin: 200px;
+        --pyAbout-width: calc(0.7*(100vw - var(--nav-width))); 
+    }
+}
 
 .pageHeader {
     margin-top: var(--header-top-margin);
