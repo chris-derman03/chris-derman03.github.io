@@ -61,6 +61,8 @@ const iconMap: { [key: string]: string } = {
   UNIX: "/img/unix.webp",
   "Apache Airflow": "/img/airflow.webp",
   LangChain: "/img/langchain.webp",
+  Tableau: "/img/tableau.webp",
+  "Computer Vision": "/img/cvision.webp",
 };
 
 interface Props {
