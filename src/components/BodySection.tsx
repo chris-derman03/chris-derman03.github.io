@@ -19,7 +19,9 @@ const BodySection = ({
       <div className="bodySectionHeader">
         <h2 className="bodySectionHeaderTitle">{headerText}</h2>
       </div>
-      <div className="bodySectionContent">{sectionContent}</div>
+      <div className={"bodySectionContent " + id + "_Content"}>
+        {sectionContent}
+      </div>
     </div>
   );
 };

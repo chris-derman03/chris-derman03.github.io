@@ -348,9 +348,6 @@ h6 {
 .bodySectionContent {
     display: flex;
     justify-content: start;
-
-    width: 100%;
-    overflow-x: auto; 
 }
 
 .bodySectionBody {
@@ -516,6 +513,11 @@ h6 {
 #BodySection_Career { 
     width: 80%;
     margin-top: 400px;
+}
+
+.BodySection_Career_Content {
+    width: 100%;
+    overflow-x: auto; 
 }
 
 .timeline {
