@@ -10,6 +10,26 @@ import Footer from "./components/Footer/Footer";
 import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    function setViewportHeight() {
+      const viewportHeight = window.innerHeight;
+
+      // Set the height of the .pageContainer element
+      const pageContainer = document.querySelector(
+        ".pageContainer"
+      ) as HTMLElement;
+
+      if (pageContainer) {
+        pageContainer.style.height = `${viewportHeight}px`;
+      }
+    }
+
+    // Set the height on page load and resize
+    setViewportHeight();
+    window.addEventListener("resize", setViewportHeight);
+    window.addEventListener("load", setViewportHeight);
+  }, []);
+
   // Start all body section horizontal scrolls in the center
   useEffect(() => {
     function updateScroll() {
