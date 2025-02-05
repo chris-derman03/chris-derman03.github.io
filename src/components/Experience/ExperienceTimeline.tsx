@@ -6,7 +6,7 @@ interface Props {
   timelineData: { timeline: TimelinePointData[] };
 }
 
-const ExperienceTree = ({ timelineData }: Props) => {
+const ExperienceTimeline = ({ timelineData }: Props) => {
   const timeline = timelineData.timeline;
 
   return (
@@ -24,11 +24,15 @@ const ExperienceTree = ({ timelineData }: Props) => {
         </Flex>
 
         {timeline.map((point, index) => (
-          <TimelineNode nodeData={point} idx={index} />
+          <TimelineNode
+            nodeData={point}
+            idx={index}
+            key={"timelineNode_" + index}
+          />
         ))}
       </Flex>
     </Flex>
   );
 };
 
-export default ExperienceTree;
+export default ExperienceTimeline;
