@@ -14,7 +14,7 @@
     --content-flex-direction: column;
     --body-section-width: 80%;
     --body-section-margin: 0px;
-    --header-top-margin: 125px;
+    --header-top-margin: 50px;
 
     --theme-color-a: rgba(20, 7, 32, 0.4);
     --theme-color-b: rgb(49, 31, 65, 0.8);
@@ -36,19 +36,13 @@
         --global-font-size: 14px;
         --body-section-width: 60%;
         --body-section-margin: 20%;
-        --header-top-margin: 200px;
     }
 }
 
 @media (min-width: 1240px) {
     :root {
         --content-flex-direction: row;
-    }
-}
-
-@media (min-width: 1400px) {
-    :root {
-        --header-flex-direction: row;
+        --header-top-margin: 200px;
     }
 }
 
@@ -182,6 +176,11 @@ h6 {
 
 /* Default (Mobile) Settings */
 :root {
+    --nav-transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+    --nav-transform: translateY(-100px);
+    --nav-animation-end-opacity: 0;
+    --nav-animation-end-height: 0;
+
     --nav-width: 100vw;
     --nav-flex-direction: row;
     --nav-flex-wrap: wrap;
@@ -201,6 +200,11 @@ h6 {
     .navAbout { order: 3; }
 
     :root {
+        --nav-transition: none;
+        --nav-transform: none;
+        --nav-animation-end-opacity: 100;
+        --nav-animation-end-height: 100%;
+
         --nav-width: 19vw;
         --nav-flex-direction: column;
         --nav-flex-wrap: none;
@@ -214,8 +218,20 @@ h6 {
     }
 }
 
+.navHiddable {
+    transition: var(--nav-transition);
+    max-height: var(--nav-images-width);
+}
+
+.navHidden {
+    transform: var(--nav-transform);
+    opacity: var(--nav-animation-end-opacity);
+    max-height: var(--nav-animation-end-height);
+}
+
 .nav {
     width: var(--nav-width);
+    z-index: 1;
 
     flex-direction: var(--nav-flex-direction);
     flex-wrap: var(--nav-flex-wrap);

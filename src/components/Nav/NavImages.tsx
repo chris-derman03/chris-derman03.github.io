@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { Flex, Image } from "@chakra-ui/react";
 
-const NavImages = () => {
+interface Props {
+  className: string;
+}
+
+const NavImages = ({ className }: Props) => {
   const images = ["/img/header/geisel.png", "/img/header/dublin.png"];
   const [currentImageIdx, setCurrentImageIdx] = useState(0);
   const [isFading, setIsFading] = useState(false);
@@ -20,7 +24,7 @@ const NavImages = () => {
   }, [images.length]);
 
   return (
-    <Flex className="navImagesContainer">
+    <Flex className={"navImagesContainer " + className}>
       {images.map((image, index) => (
         <Image
           key={index}

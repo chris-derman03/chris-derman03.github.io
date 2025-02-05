@@ -1,5 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import NavImages from "./NavImages";
+import { useEffect } from "react";
 const scrollSections = ["About", "Code", "Career", "Skills", "Story"];
 
 const scrollEmojis: { [key: string]: string } = {
@@ -22,10 +23,42 @@ const handleClick = (sectionId: string): void => {
 };
 
 const NavBar = () => {
+  useEffect(() => {
+    const content = document.getElementsByClassName("content")[0];
+    const root = document.documentElement;
+
+    const handleScroll = () => {
+      const topContents = document.getElementsByClassName("topContent");
+      const isScrolled = content.scrollTop > 200;
+      const isMobile = window.innerWidth < 1240;
+
+      for (let i = 0; i < topContents.length; i++) {
+        if (isScrolled) {
+          topContents[i].classList.add("navHidden");
+        } else {
+          topContents[i].classList.remove("navHidden");
+        }
+      }
+
+      // Update CSS variable for spacing dynamically
+      if (isMobile) {
+        root.style.setProperty(
+          "--nav-mobile-spacing",
+          isScrolled ? "3px" : "20px"
+        );
+      }
+    };
+
+    content.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener on unmount
+    return () => content.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Flex className="nav">
-      <NavImages />
-      <Flex className="navAbout">
+      <NavImages className="topContent navHiddable" />
+      <Flex className="navAbout topContent navHiddable">
         <h1>Christian DerManuelian</h1>
         <h6>Data Scientist</h6>
         <h6>Machine Learning Engineer</h6>
