@@ -600,15 +600,16 @@ h6 {
     position: relative;
     width: 400px;
     justify-content: flex-end;
+    clip-path: inset(0 -15px 0 0);
 }
 
 .timelineNodePanelReversed {
     justify-content: flex-start;
+    clip-path: inset(0 0 0 -15px);
 }
 
 .timelineNodeDate {
     justify-content: start;
-    
 }
 
 .timelineNodeDateReversed {
@@ -658,6 +659,69 @@ h6 {
     position: absolute;
     object-fit: cover;
     opacity: 0.2;
+}
+
+/* Panel Hover Animations */
+.timelineNodePanel {
+    transition: background-color 0.5s ease-in-out,
+                transform 0.3s ease-out;
+}
+
+.timelineNodeImage {
+    transition: transform 0.5s ease-out;
+}
+
+.timelineNodeText {
+    transition: transform 0.7s ease-in-out;
+}
+
+.timelineNodeDescription::after {
+    transition: border-left-color 0.5s ease-in-out;
+}
+
+.timelineNodeDescriptionReversed::after {
+    transition: border-right-color 0.5s ease-in-out;
+}
+
+.timelineLink:hover .timelineNodePanel {
+    background-color: var(--theme-color-c);
+    border-radius: 7px;
+}
+
+.timelineLinkLeft:hover .timelineNodePanel {
+    transform: translateX(-4%);
+}
+
+.timelineLinkLeft:hover .timelineNodeImage {
+    transform: translateX(-5%);
+}
+
+.timelineLinkLeft:hover .timelineNodePanel {
+    transform: translateX(-4%);
+}
+
+.timelineLinkLeft:hover .timelineNodeText {
+    transform: translateX(-10%);
+}
+
+.timelineLinkRight:hover .timelineNodePanel {
+    transform: translateX(4%);
+}
+
+.timelineLinkRight:hover .timelineNodeImage {
+    transform: translateX(5%);
+}
+
+.timelineLinkRight:hover .timelineNodeText {
+    transform: translateX(10%);
+}
+
+.timelineLink:hover .timelineNodeDescription::after {
+    border-left-color: var(--theme-color-c);
+}
+
+.timelineLink:hover .timelineNodeDescriptionReversed::after {
+    border-right-color: var(--theme-color-c);
 }
 
 /* =========================================================== */

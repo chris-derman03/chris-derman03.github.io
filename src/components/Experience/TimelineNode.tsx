@@ -23,24 +23,32 @@ const TimelineNode = ({ nodeData, idx }: Props) => {
     <Flex
       className={`timelineNode ${idx % 2 === 0 ? "" : "timelineNodeReversed"}`}
     >
-      <Flex
-        className={`timelineNodePanel timelineNodeDescription ${
-          idx % 2 === 0
-            ? ""
-            : "timelineNodeDescriptionReversed timelineNodePanelReversed"
+      <a
+        className={`timelineLink ${
+          idx % 2 === 0 ? "timelineLinkLeft" : "timelineLinkRight"
         }`}
+        target="_blank"
+        href={nodeData?.link}
       >
         <Flex
-          className={`timelineNodeText ${
-            idx % 2 === 0 ? "" : "timelineNodeTextReversed"
+          className={`timelineNodePanel timelineNodeDescription ${
+            idx % 2 === 0
+              ? ""
+              : "timelineNodeDescriptionReversed timelineNodePanelReversed"
           }`}
         >
-          <h5>{nodeData?.title}</h5>
-          <p className="h7">{nodeData?.company}</p>
-          <h4>{nodeData?.range}</h4>
+          <Flex
+            className={`timelineNodeText ${
+              idx % 2 === 0 ? "" : "timelineNodeTextReversed"
+            }`}
+          >
+            <h5>{nodeData?.title}</h5>
+            <p className="h7">{nodeData?.company}</p>
+            <h4>{nodeData?.range}</h4>
+          </Flex>
+          <Image src={imagePath} className="timelineNodeImage" boxSize="100%" />
         </Flex>
-        <Image src={imagePath} className="timelineNodeImage" boxSize="100%" />
-      </Flex>
+      </a>
       <TimelinePoint category={nodeData?.category} />
       <Flex
         className={`timelineNodePanel timelineNodeDate ${
