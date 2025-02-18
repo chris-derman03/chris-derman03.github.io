@@ -1,6 +1,14 @@
 {
     "projects": [
         {
+            "title": "This Website",
+            "link": "https://github.com/chris-derman03/chris-derman03.github.io",
+            "description": "", 
+            "skill_set": ["React.js", "Vite", "TypeScript", "JavaScript", "HTML", "CSS"],
+            "date": "January 24, 2024",
+            "image": "/img/projects/this.webp"
+        },
+        {
             "title": "React Project: GameHub",
             "link": "https://game-hub-cderman.vercel.app",
             "description": "A React project for a video game discovery app. This was the end goal of Mosh Hamedani's React course Part 1 that can be found at https://codewithmosh.com/p/ultimate-react-part1",
