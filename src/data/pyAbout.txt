@@ -1,11 +1,16 @@
 <span className="pyCode"><i>class</i></span> <span className="pyClassHeader">Me</span><span className="pySyn2">()</span><span className="pyVar">:</span>
 <span className="pyVar">    age = </span><span className="pyLiteral">22</span>
 <span className="pyVar">    about = </span><span className="pySyn2">[</span><span className="pyString">"Data Scientist"</span><span className="pyVar">,</span>
-             <span className="pyString">"Machine Learning Engineer"</span><span className="pyVar">,</span>
-             <span className="pyString">"B.S. Data Science Degree - UCSD"</span><span className="pyVar">,</span>
-             <span className="pyString">"Web Developer"</span><span className="pyVar">,</span>
-             <span className="pyString">"Ice Hockey Goalie"</span><span className="pySyn2">]</span>
-<span className="pyVar">    seekingWork = </span><span className="pyLiteral">True</span>
+              <span className="pyString">"Machine Learning Engineer"</span><span className="pyVar">,</span>
+              <span className="pyString">"Web Developer"</span><span className="pyVar">,</span>
+              <span className="pyString">"IT Specialist"</span><span className="pyVar">,</span>
+              <span className="pyString">"Ice Hockey Player (Goalie)"</span><span className="pySyn2">]</span>
+
+<span className="pyVar">    education = </span><span className="pyString">"B.S. - Data Science (UC San Diego)"</span>
+
+<span className="pyVar">    employment = <span className="pySyn2">[</span></span><span className="pyString">"Forensic Scientist, IRSA [Feb 2025 - Present]"</span><span className="pyVar">,</span>
+                   <span className="pyString">"Systems Architect, IRSA [Feb 2025 - Present]"</span><span className="pySyn2">]</span>
+
 <span className="pyVar">    location = </span><span className="pyString">"Southern California"</span>
 
 <span className="pyVar">    email = </span><span className="pyString">"christian.dermanuelian@gmail.com"</span>

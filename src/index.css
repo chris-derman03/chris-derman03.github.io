@@ -46,7 +46,6 @@ h2 {
 h3 {
     color: var(--theme-color-2);
     font-size: calc(var(--global-font-size)*1.8);
-    text-shadow: 0 0 10px rgb(255, 171, 171);
 }
 
 
@@ -730,6 +729,14 @@ h6 {
 #BodySection_Skills { 
     width: 80%;
     margin-top: 300px;
+}
+
+.skillSectionTitleContainer {
+    box-shadow: 0 0 10px var(--theme-color-1);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: var(--theme-color-b);
 }
 
 .skillSectionTitle {
