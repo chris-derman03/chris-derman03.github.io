@@ -21,7 +21,7 @@ const SkillsBody = ({ skillset }: Props) => {
                 <Flex
                     key={category}
                     flexDir={"column"}
-                    gap={6}
+                    gap={8}
                     alignItems={"center"}
                 >
                     <div className="skillSectionTitleContainer">
