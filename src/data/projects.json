@@ -9,14 +9,6 @@
             "image": "/img/projects/this.webp"
         },
         {
-            "title": "React Project: GameHub",
-            "link": "https://game-hub-cderman.vercel.app",
-            "description": "A React project for a video game discovery app. This was the end goal of Mosh Hamedani's React course Part 1 that can be found at https://codewithmosh.com/p/ultimate-react-part1",
-            "skill_set": ["React.js", "Vite", "TypeScript", "JavaScript", "HTML", "CSS"],
-            "date": "October 12, 2024",
-            "image": "/img/projects/gamehub.webp"
-        },
-        {
             "title": "Machine Learning Paper: Using Pretrained Models to Generalize Different Tasks",
             "link": "https://github.com/chris-derman03/AI_generalization/blob/main/Report.pdf",
             "description": "Class project research question/proposal. (Cog Sci 181: Neural Networks and Deep Learning) Research question aimed to methodologically cut down training time and explore potential AGI capabilities of our current Machine Learning framework.",
