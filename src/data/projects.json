@@ -1,6 +1,22 @@
 {
     "projects": [
         {
+            "title": "OCR to LLM Pipeline",
+            "link": "https://github.com/chris-derman03/pdfChat",
+            "description": "A rough framework to assist document processing workflows at IRSA. Runs PDFs through an OCR and then into a Large Language Model for summary and discussion. OCR because many received documents do not have embedded text. LLMs run locally due to privacy concerns for PDF content.", 
+            "skill_set": ["Python", "LLMs", "Computer Vision"],
+            "date": "August 11, 2025",
+            "image": "/img/projects/pdfchat.webp"
+        },
+        {
+            "title": "IRSA Public Website",
+            "link": "https://irsa.us",
+            "description": "Next.js with Typescript. Company Website for Institute of Risk and Safety Analyses", 
+            "skill_set": ["Next.js", "React.js", "TypeScript", "JavaScript", "HTML", "CSS"],
+            "date": "May 28, 2025",
+            "image": "/img/projects/irsa-us.webp"
+        },
+        {
             "title": "This Website",
             "link": "https://github.com/chris-derman03/chris-derman03.github.io",
             "description": "", 
@@ -27,7 +43,7 @@
         {
             "title": "Hardware Acceleration of Deep Learning Algorithms",
             "link": "https://github.com/louiecai/DSC-180B-Hardware-Acceleration/blob/main/Project%20Showcase%20Poster.pdf",
-            "description": "A Data Science approach to hardware acceleration of Deep Learning Model Executions. Area of study is HAR (Human Activity Recognition) Deep Learning Models.",
+            "description": "A Team Project Data Science approach to hardware acceleration of Deep Learning Model Executions. Area of study is HAR (Human Activity Recognition) Deep Learning Models.",
             "skill_set": ["PyTorch", "AWS", "Machine Learning", "Computer Architecture", "Python", "Deep Learning"],
             "date": "March 15, 2024",
             "image": "/img/projects/180b.webp"
