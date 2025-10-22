@@ -71,6 +71,8 @@ const NavBar = () => {
       <Flex className="navAbout topContent navHiddable">
         <h1>CHRISTIAN DERMANUELIAN</h1>
         <h6>Data Scientist</h6>
+        <h6>Programmer</h6>
+        <h6>Systems Architect</h6>
         <h6>Machine Learning Engineer</h6>
       </Flex>
       <Flex className="navSection">

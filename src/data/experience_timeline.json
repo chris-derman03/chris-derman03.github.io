@@ -11,7 +11,7 @@
     },
     {
         "company": "TUMO",
-        "title": "Software Intern",
+        "title": "Software Applications & Design Intern",
         "start": "Jun 2019 - Jul 2019",
         "range": "2 Months",
         "cover": "/img/tumo.webp",
@@ -44,5 +44,14 @@
         "cover": "/img/ucsd.webp",
         "link": "https://ucsd.edu",
         "category": "education"
+    },
+    {
+        "company": "Institute of Risk and Safety Analyses",
+        "title": "Systems Architect | Forensic Scientist",
+        "start": "Feb 2025 - PRESENT",
+        "range": "8 Months",
+        "cover": "/img/irsa.png",
+        "link": "https://irsa.us",
+        "category": "job"
     }]
 }

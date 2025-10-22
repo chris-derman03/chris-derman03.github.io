@@ -10,7 +10,7 @@ const Projects = ({ id }: Props) => {
   return (
     <BodySection
       id={id}
-      headerText="💾 Projects 🖥️"
+      headerText="💾 Personal Projects 🖥️"
       sectionContent={<ProjectsFlex projectsData={ProjectData} />}
       hiddenDirection="hiddenRight"
     />
