@@ -51,7 +51,7 @@
         {
             "title": "Frequency Sort",
             "link": "https://github.com/chris-derman03/Frequency-Sort",
-            "description": "Code for a sorting algorithm I thought of. It runs in linear time, given some assumptions about the data as well as knowing the minimum and maximum beforehand. Though it was not able to outperform mergesort.",
+            "description": "Code for a sorting algorithm I thought of. It runs in linear time and beats MergeSort.",
             "skill_set": ["Python", "NumPy", "Matplotlib"],
             "date": "November 29, 2023",
             "image": "/img/projects/freqSort.webp"
