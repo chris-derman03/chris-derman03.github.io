@@ -54,7 +54,7 @@ const NavBar = () => {
       if (isMobile) {
         root.style.setProperty(
           "--nav-mobile-spacing",
-          isScrolled ? "3px" : "20px"
+          isScrolled ? "3px" : "20px",
         );
       }
     };
@@ -70,10 +70,9 @@ const NavBar = () => {
       <NavImages className="topContent navHiddable" />
       <Flex className="navAbout topContent navHiddable">
         <h1>CHRISTIAN DERMANUELIAN</h1>
-        <h6>Data Scientist</h6>
         <h6>Programmer</h6>
         <h6>Systems Architect</h6>
-        <h6>Machine Learning Engineer</h6>
+        <h6>Data Scientist</h6>
       </Flex>
       <Flex className="navSection">
         {scrollSections.map((section) => (

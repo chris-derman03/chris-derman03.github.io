@@ -10,92 +10,91 @@ import Footer from "./components/Footer/Footer";
 import { useEffect } from "react";
 
 function App() {
-    useEffect(() => {
-        function setViewportHeight() {
-            const viewportHeight = window.innerHeight;
+  useEffect(() => {
+    function setViewportHeight() {
+      const viewportHeight = window.innerHeight;
 
-            // Set the height of the .pageContainer element
-            const pageContainer = document.querySelector(
-                ".pageContainer"
-            ) as HTMLElement;
+      // Set the height of the .pageContainer element
+      const pageContainer = document.querySelector(
+        ".pageContainer",
+      ) as HTMLElement;
 
-            if (pageContainer) {
-                pageContainer.style.height = `${viewportHeight}px`;
-            }
+      if (pageContainer) {
+        pageContainer.style.height = `${viewportHeight}px`;
+      }
+    }
+
+    // Set the height on page load and resize
+    setViewportHeight();
+    window.addEventListener("resize", setViewportHeight);
+    window.addEventListener("load", setViewportHeight);
+  }, []);
+
+  // Start all body section horizontal scrolls in the center
+  useEffect(() => {
+    function updateScroll() {
+      const parent = document
+        .getElementById("BodySection_Career")
+        ?.querySelector(".bodySectionContent") as HTMLElement;
+      const child = document.querySelector(".timeline");
+
+      if (child && parent) {
+        if (child.clientWidth <= parent.clientWidth) {
+          // Child fits inside parent, use flexbox centering
+          parent.scrollLeft = 0;
+          parent.style.justifyContent = "center";
+        } else {
+          // Child overflows, center it via scroll position
+          parent.scrollLeft = (parent.scrollWidth - parent.clientWidth) / 2;
+          parent.style.justifyContent = "start";
         }
+      }
+    }
 
-        // Set the height on page load and resize
-        setViewportHeight();
-        window.addEventListener("resize", setViewportHeight);
-        window.addEventListener("load", setViewportHeight);
-    }, []);
+    updateScroll();
+    // Run on page load and whenever the window resizes
+    window.addEventListener("load", updateScroll);
+    window.addEventListener("resize", updateScroll);
+  }, []);
 
-    // Start all body section horizontal scrolls in the center
-    useEffect(() => {
-        function updateScroll() {
-            const parent = document
-                .getElementById("BodySection_Career")
-                ?.querySelector(".bodySectionContent") as HTMLElement;
-            const child = document.querySelector(".timeline");
-
-            if (child && parent) {
-                if (child.clientWidth <= parent.clientWidth) {
-                    // Child fits inside parent, use flexbox centering
-                    parent.scrollLeft = 0;
-                    parent.style.justifyContent = "center";
-                } else {
-                    // Child overflows, center it via scroll position
-                    parent.scrollLeft =
-                        (parent.scrollWidth - parent.clientWidth) / 2;
-                    parent.style.justifyContent = "start";
-                }
-            }
+  // For scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
         }
+      });
+    });
 
-        updateScroll();
-        // Run on page load and whenever the window resizes
-        window.addEventListener("load", updateScroll);
-        window.addEventListener("resize", updateScroll);
-    }, []);
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
 
-    // For scroll animations
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                } else {
-                    entry.target.classList.remove("show");
-                }
-            });
-        });
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
 
-        const hiddenElements = document.querySelectorAll(".hidden");
-        hiddenElements.forEach((el) => observer.observe(el));
-
-        return () => {
-            hiddenElements.forEach((el) => observer.unobserve(el));
-        };
-    }, []);
-
-    return (
-        <>
-            <video autoPlay muted playsInline loop id="bg-video">
-                <source src={background_loop} type="video/mp4" />
-            </video>
-            <div className="pageContainer">
-                <NavBar />
-                <Flex className="content">
-                    <Header id="BodySection_About" />
-                    <Projects id="BodySection_Code" />
-                    <Experience id="BodySection_Career" />
-                    <Skills id="BodySection_Skills" />
-                    <MyStory id="BodySection_Story" />
-                    <Footer />
-                </Flex>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <video autoPlay muted playsInline loop id="bg-video">
+        <source src={background_loop} type="video/mp4" />
+      </video>
+      <div className="pageContainer">
+        <NavBar />
+        <Flex className="content">
+          <Header id="BodySection_About" />
+          <Projects id="BodySection_Code" />
+          <Experience id="BodySection_Career" />
+          <Skills id="BodySection_Skills" />
+          <MyStory id="BodySection_Story" />
+          <Footer />
+        </Flex>
+      </div>
+    </>
+  );
 }
 
 export default App;
