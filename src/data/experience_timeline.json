@@ -1,57 +1,58 @@
 {
-    "timeline": [
+  "timeline": [
     {
-        "company": "AGBU MDS",
-        "title": "K-12 School",
-        "start": "Feb 2006 - Jun 2020",
-        "range": "15 Years",
-        "cover": "/img/agbu_logo.webp",
-        "link": "https://www.agbumds.org",
-        "category": "education"
+      "company": "AGBU MDS",
+      "title": "K-12 School",
+      "start": "Feb 2006 - Jun 2020",
+      "range": "15 Years",
+      "cover": "/img/agbu_logo.webp",
+      "link": "https://www.agbumds.org",
+      "category": "education"
     },
     {
-        "company": "TUMO",
-        "title": "Software Applications & Design Intern",
-        "start": "Jun 2019 - Jul 2019",
-        "range": "2 Months",
-        "cover": "/img/tumo.webp",
-        "link": "https://tumo.org",
-        "category": "job"
+      "company": "TUMO",
+      "title": "Software Applications & Design Intern",
+      "start": "Jun 2019 - Jul 2019",
+      "range": "2 Months",
+      "cover": "/img/tumo.webp",
+      "link": "https://tumo.org",
+      "category": "job"
     },
     {
-        "company": "Seven Smarts LLC",
-        "title": "Software Engineer Intern",
-        "start": "Jun 2019 - Jul 2019",
-        "range": "2 Months",
-        "cover": "/img/7smart.webp",
-        "link": "https://www.7smarts.com",
-        "category": "job"
+      "company": "Seven Smarts LLC",
+      "title": "Software Engineer Intern",
+      "start": "Jun 2019 - Jul 2019",
+      "range": "2 Months",
+      "cover": "/img/7smart.webp",
+      "link": "https://www.7smarts.com",
+      "category": "job"
     },
     {
-        "company": "Planet Bids",
-        "title": "Data Analyst Intern",
-        "start": "Aug 2019 - Nov 2019",
-        "range": "4 Months",
-        "cover": "/img/pb_logo.webp",
-        "link": "https://home.planetbids.com",
-        "category": "job"
+      "company": "Planet Bids",
+      "title": "Data Analyst Intern",
+      "start": "Aug 2019 - Nov 2019",
+      "range": "4 Months",
+      "cover": "/img/pb_logo.webp",
+      "link": "https://home.planetbids.com",
+      "category": "job"
     },
     {
-        "company": "U.C. San Diego",
-        "title": "Data Science B.S.",
-        "start": "Sep 2020 - Jun 2024",
-        "range": "3 Years 10 Months",
-        "cover": "/img/ucsd.webp",
-        "link": "https://ucsd.edu",
-        "category": "education"
+      "company": "U.C. San Diego",
+      "title": "Data Science B.S.",
+      "start": "Sep 2020 - Jun 2024",
+      "range": "3 Years 10 Months",
+      "cover": "/img/ucsd.webp",
+      "link": "https://ucsd.edu",
+      "category": "education"
     },
     {
-        "company": "Institute of Risk and Safety Analyses",
-        "title": "Systems Architect | Forensic Scientist",
-        "start": "Feb 2025 - PRESENT",
-        "range": "8 Months",
-        "cover": "/img/irsa.png",
-        "link": "https://irsa.us",
-        "category": "job"
-    }]
+      "company": "Institute of Risk and Safety Analyses",
+      "title": "Systems Architect | Forensic Scientist",
+      "start": "Feb 2025 - PRESENT",
+      "range": "1 Year 7 Months",
+      "cover": "/img/irsa.png",
+      "link": "https://irsa.us",
+      "category": "job"
+    }
+  ]
 }

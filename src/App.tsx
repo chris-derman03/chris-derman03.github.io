@@ -86,7 +86,7 @@ function App() {
         <NavBar />
         <Flex className="content">
           <Header id="BodySection_About" />
-          <Projects id="BodySection_Code" />
+          <Projects id="BodySection_Projects" />
           <Experience id="BodySection_Career" />
           <Skills id="BodySection_Skills" />
           <MyStory id="BodySection_Story" />

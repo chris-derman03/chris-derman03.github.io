@@ -1,12 +1,12 @@
 import { Flex } from "@chakra-ui/react";
 import NavImages from "./NavImages";
 import { useEffect } from "react";
-const scrollSections = ["About", "Code", "Career", "Skills", "Story"];
+const scrollSections = ["About", "Projects", "Career", "Skills", "Story"];
 
 const scrollEmojis: { [key: string]: string } = {
   About: "📖",
   Career: "💼",
-  Code: "💻",
+  Projects: "💻",
   Skills: "🛠️",
   Story: "📜",
 };
